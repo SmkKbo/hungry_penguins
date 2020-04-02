@@ -1,0 +1,139 @@
+.reviews {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.section__title {
+  @include font-settings(15px, 1, 700);
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 0.96px;
+  text-align: center;
+
+  &-bracket {
+    color: rgb(254, 192, 42);
+    margin: 0 8px;
+  }
+}
+
+.reviews__card {
+  width: 270px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
+
+  &:first-child {
+    display: none;
+  }
+
+  &:last-child {
+    display: none;
+  }
+}
+
+.reviews__card-image {
+  @include size (104px, 104px);
+  border: 7px solid rgb(234, 241, 249);
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 22px;
+}
+
+.reviews__text-wrapper {
+  padding-right: 28px;
+  padding-left: 28px;
+
+  &::before {
+    @include pseudo ($display: block);
+    @include size(17px, 12px);
+    @include bg-image ($size: contain);
+    margin: 0 auto;
+    // background-image: url(../images/section-9/quotes.svg);
+    margin-bottom: 24px;
+  }
+}
+
+.reviews__card-name {
+  @include font-settings(21px, 30px, 700);
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  color: rgb(44, 44, 44);
+}
+
+.reviews__card-text {
+  @include font-settings(14px, 24px);
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  color: rgb(108, 110, 121);
+
+  &-link {
+    color: #fec02a;
+  }
+}
+
+.reviews__slider {
+  position: relative;
+}
+
+.reviews__list-button-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 310px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews__list-button {
+  @include size(40px, 40px);
+  border-radius: 50%;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 2px 3px 9px 0px rgba(2, 2, 1, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-icon {
+    @include size(16px, 12px);
+    fill: rgb(95, 124, 236);
+
+    &--inactive {
+      fill: rgb(234, 234, 234);
+    }
+  }
+}
+
+.btn-prev {
+  display: block;
+  @include bg-image;
+  transform: rotate(180deg);
+}
+
+.btn-next {
+  display: block;
+  @include bg-image;
+}
+
+@media (min-width: 710px) {
+  .section__title {
+    @include font-settings(20px, 1, 700);
+  }
+
+  .reviews__card {
+    width: 382px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  &:first-child {
+    display: block;
+  }
+
+  &:last-child {
+    display: block;
+  }
+}
