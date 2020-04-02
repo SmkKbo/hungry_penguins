@@ -4,3 +4,22 @@
 
 @import 'normalize.scss';
 @import 'base.scss';
+@import './helpers/variables.scss';
+@import './helpers/mixins.scss';
+@import './helpers/placeholders.scss';
+@import './helpers/fonts.scss';
+@import './base.scss';
+
+// SECTIONS
+@import './sections/header.scss';
+@import './sections/section-1.scss';
+@import './sections/section-2.scss';
+@import './sections/section-3.scss';
+@import './sections/section-4.scss';
+@import './sections/section-5.scss';
+@import './sections/section-6.scss';
+@import './sections/section-7.scss';
+@import './sections/section-8.scss';
+@import './sections/section-9.scss';
+@import './sections/section-10.scss';
+@import './sections/footer.scss;
