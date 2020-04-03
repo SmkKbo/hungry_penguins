@@ -1,3 +1,8 @@
+@media (max-width: 767px)
+    .container {
+        min-width: 320px;
+    }
+
 .preparation {
     padding: 48px 16px;
 }
@@ -44,6 +49,7 @@
         &__description {
             padding-left: 22px;
             padding-bottom: 45px;
+            position: relative;
         }
 
         &__description:nth-child(2n-1) {
@@ -56,12 +62,14 @@
     }
 
     &__wrapper-icon {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        top: 38px               ;
     }
 }
 
-path {
+path { 
     fill: url(#gradient);
 }
 
@@ -71,6 +79,7 @@ path {
     font-weight: 700;
     margin-bottom: 20px;
     padding-top: 36px;
+    padding-left: 35px;
 }
 
 .programm-types__age {
@@ -79,6 +88,21 @@ path {
     color: rgb(254, 192, 42);
     font-weight: 700;
     margin-bottom: 20px;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+        display: inline-block;
+        content: "років";
+        font-size: 13px;
+        line-height: 22px;
+        color: rgb(254, 192, 42);
+        position: absolute;
+        top: -5px;
+        left: 90px;
+        padding: 5px;
+        border-bottom: 1px solid rgb(254, 192, 42);
+    }
 }
 
 .programm-types__description {
