@@ -18,7 +18,7 @@
       color: rgb(254, 192, 42);
       margin-right: 6px;
     }
-    
+
     &::after {
       display: inline-block;
       content: ']';
@@ -54,6 +54,15 @@
             background-color: rgb(232, 241, 250);
         }
     }
+
+    &__wrapper-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+path {
+    fill: url(#gradient);
 }
 
 .programm-types__title {
