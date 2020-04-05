@@ -81,12 +81,8 @@
         width: 18px;
         height: 18px;
         position: absolute;
-        top: 38px               ;
+        top: 38px;
     }
-}
-
-path {
-    fill: url(#gradient);
 }
 
 .programm-types__title {
@@ -96,6 +92,17 @@ path {
     margin-bottom: 20px;
     padding-top: 36px;
     padding-left: 35px;
+    position: relative;
+
+    &::before {
+        display: inline-block;
+        content: url(../images/icons__section-3/star.svg);
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        /*top: 60%;*/
+        bottom: 0;
+    }
 }
 
 .programm-types__age {
