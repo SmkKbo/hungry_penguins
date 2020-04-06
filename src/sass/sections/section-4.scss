@@ -1,0 +1,202 @@
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 320px) {
+
+    .container {
+        min-width: 290px;
+        padding: 0 16px;
+    }
+
+    .section-test {
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 34px;
+    }
+
+    .section-title {
+        padding-top: 34px;
+        margin-bottom: 22px;
+        font-size: 30px;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: center;
+
+        &::before {
+            display: inline-block;
+            content: '[';
+            color: rgb(254, 192, 42);
+            @include size(10px, 30px);
+            margin-right: 6px;
+          }
+          &::after {
+            display: inline-block;
+            content: ']';
+            color: rgb(254, 192, 42);
+            @include size(10px, 45px);
+            margin-left: 6px;
+          }
+    
+        &__test {
+            font-family: HelveticaNeueCyr;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            padding: 0 20px;
+            padding-top: 104px;
+            padding-bottom: 28px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../images/icons__section-4/section-4-bg.svg);
+            background-size: cover;
+            color: #fff;
+
+            &::before {
+                position: absolute;
+                top: 50px;
+                left: 120px;
+                display: block;
+                height: 48px;
+                width: 48px;
+                content: url(../images/icons__section-4/icon-sputnik.svg);
+            }
+
+            &__description {
+                font-size: 14px;
+                line-height: 24px;
+                padding-left: 28px;
+                padding-right: 24px;
+                margin-bottom: 24px;
+            }
+        }
+
+
+        &__questions {
+            color: rgb(254, 192, 42);
+            font-size: 14px;
+            line-height: 21px;
+            margin-bottom: 26px;
+        }
+
+        &__item {
+            padding-right: 68px;
+            font-size: 17px;
+            line-height: 27px;
+            margin-bottom: 34px;
+
+            &-title {
+                font-size: 14px;
+                line-height: 17px;
+                color: rgb(254, 192, 42);
+                margin-bottom: 16px;
+                font-weight: 400;
+            }
+        }
+
+        &__answers-item {
+            margin-bottom: 44px;
+
+            &:last-child {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .container {
+        min-width: 710px;
+    }
+
+    .section-test {
+        padding-bottom: 60px;
+    }
+
+    .testing {
+        padding-left: 40px;
+    }
+
+    .section-title {
+        padding-top: 40px;
+
+        &__test {
+            padding: 0 90px;
+            padding-top: 164px;
+            padding-bottom: 36px;
+            font-size: 20px;
+            line-height: 25px;
+
+            &::before {
+                top: 72px;
+                left: 318px;
+            }
+
+            &__description {
+                padding-right: 96px;
+                font-size: 16px;
+                line-height: 30px;
+                padding-left: 0;
+            }
+        }
+
+        &__questions {
+            padding-left: 0;
+
+            &-list {
+            padding-left: 0;
+            }
+        }
+
+        &__answers-item {
+            font-size: 15px;
+        }
+    }
+
+}
+
+@media (min-width: 1460px) {
+
+    .container {
+        min-width: 1420px;
+    }
+
+    .section-title {
+        margin: 0;
+
+        &__test {
+            padding: 0 325px;
+            padding-top: 260px;
+            padding-bottom: 68px;
+            font-size: 30px;
+            line-height: 40px;
+
+            &::before {
+                top: 120px;
+                left: 675px;
+            }
+        }
+
+    }
+
+    .testing {
+        padding-top: 120px;
+    }
+
+}
