@@ -1,0 +1,238 @@
+.reviews {
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  &-container {
+    width: 270px;
+    margin: 0 auto;
+  }
+}
+
+.section__title {
+  @include font-settings(15px, 1, 700);
+  letter-spacing: 0.96px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+
+  &-bracket {
+    color: rgb(254, 192, 42);
+    margin: 0 8px;
+  }
+}
+
+.reviews__list {
+  position: relative;
+}
+
+.reviews__card {
+  width: 270px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
+}
+
+.reviews__card-image {
+  @include size (104px, 104px);
+  border: 7px solid rgb(234, 241, 249);
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 22px;
+}
+
+.reviews__text-wrapper {
+  padding-right: 28px;
+  padding-left: 28px;
+
+  &::before {
+    @include pseudo ($display: block);
+    @include size(17px, 12px);
+    @include bg-image ($size: contain);
+    margin: 0 auto;
+    background-image: url(../images/section-9/quotes.svg);
+    margin-bottom: 26px;
+  }
+}
+
+.reviews__card-name {
+  @include font-settings(21px, 30px, 700);
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  color: rgb(44, 44, 44);
+  letter-spacing: 0.63px;
+  margin-bottom: 20px;
+}
+
+.reviews__card-text {
+  @include font-settings(14px, 24px);
+  letter-spacing: 0.42px;
+  font-family: 'HelveticaNeueCyr', sans-serif;
+  color: rgb(108, 110, 121);
+
+  &-link {
+    color: rgb(254, 192, 42);
+    display: block;
+  }
+}
+
+.reviews__list-button-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 310px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.reviews__list-button {
+  @include size(40px, 40px);
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 3px 9px 0px rgba(2, 2, 1, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &-icon {
+    @include size(16px, 12px);
+    fill: rgb(95, 124, 236);
+
+    &--inactive {
+      fill: rgb(234, 234, 234);
+    }
+  }
+}
+
+.btn-next,
+.btn-prev {
+  display: block;
+  @include bg-image;
+}
+
+.btn-prev {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 767px) {
+  .reviews__card {
+    &-one {
+      display: none;
+    }
+
+    &-three {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .reviews {
+    padding-top: 36px;
+    padding-bottom: 52px;
+
+    &-container {
+      width: 710px;
+    }
+  }
+
+  .section__title {
+    @include font-settings(20px, 1, 700);
+    letter-spacing: 1.2px;
+    margin-bottom: 54px;
+  }
+
+  .reviews__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reviews__card {
+    width: 380px;
+    padding-top: 60px;
+    padding-bottom: 55px;
+
+    &-one {
+      display: block;
+    }
+
+    &-three {
+      display: block;
+    }
+  }
+
+  .reviews__card-text {
+    @include font-settings(16px, 30px);
+    letter-spacing: 0.48px;
+  }
+
+  .reviews__text-wrapper {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1219px) {
+  .reviews-container--tablet {
+    width: 100%;
+  }
+
+  .reviews__list {
+    position: relative;
+    min-height: 570px;
+    overflow: hidden;
+  }
+
+  .reviews__card {
+    position: absolute;
+
+    &-one {
+      left: -50%;
+      transform: translateX(50%);
+    }
+
+    &-two {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &-three {
+      right: -50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .reviews__list-button-wrapper {
+    width: 420px;
+  }
+}
+
+@media (min-width: 1220px) {
+  .reviews {
+    padding-top: 56px;
+    padding-bottom: 84px;
+
+    &-container {
+      width: 1220px;
+    }
+  }
+
+  .section__title {
+    @include font-settings(30px, 1, 700);
+    letter-spacing: 1.8px;
+    margin-bottom: 84px;
+  }
+
+  .reviews__list {
+    align-items: center;
+  }
+
+  .reviews__list-button-wrapper {
+    display: none;
+  }
+}
