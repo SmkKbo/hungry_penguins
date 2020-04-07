@@ -10,7 +10,10 @@
     padding: 48px 0;
 
     &-titles::before {
-        content: url(../images/icons__section-3/code.svg);
+        content: "";
+        background-image: url(../images/icons__section-3/code.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
         height: 38px;
         width: 38px;
         display: block;
@@ -135,6 +138,13 @@
 
         .preparation {
             margin-bottom: 90px;
+            padding-top: 90px;
+
+            &-titles::before {
+                height: 50px;
+                width: 50px;
+                margin: 0 auto;
+            }
     }
 
     .section-title {
@@ -214,6 +224,11 @@
     .preparation {
         margin-top: 110px;
         margin-bottom: 130px;
+
+        &-titles::before {
+            height: 70px;
+            width: 70px;
+        }
     }
 
     .section-title {
