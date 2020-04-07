@@ -5,6 +5,7 @@
 
 .test-section {
   padding-top: 104px;
+  padding-bottom: 26px;
   background-image: url(../../images/section-04/section-4-bg.svg);
   @include bg-image;
   position: relative;
@@ -30,11 +31,11 @@
   text-align: center;
 }
 
-
 .test__field {
   background-color: $main-light-color;
   width: 290px;
-  padding: 38px 30px 0;
+  padding: 38px 30px;
+  box-shadow: 0px 8px 40px 0px rgba(1, 1, 0, 0.08);
 }
 
 .section__title {
@@ -94,12 +95,10 @@
   padding-left: 30px;
 
   &::before {
-    display: inline-block;
-    content: "";
+    @include pseudo;
+    @include size(16px, 16px);
     position: absolute;
     left: 0;
-    width: 16px;
-    height: 16px;
     outline: 2px solid $yellow-accent-color;
     border: 2px solid transparent;
   }
@@ -119,4 +118,36 @@
 .test__counter {
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  &-wrapper {
+    padding: 0 22px;
+  }
+}
+
+.test__counter-btn {
+  @include size(10px, 10px);
+  @include bg-image;
+  border: none;
+  background-color: transparent;
+  background-image: url(../../images/section-04/right-arrow.svg);
+  outline: transparent;
+  cursor: pointer;
+
+  &-prev {
+    transform: rotate(180deg);
+  }
+}
+
+.test__counter-number {
+  @include font-settings(14px, 18px, 700);
+  font-family: $main-text-font;
+
+  &-prev {
+    color: $yellow-accent-color;
+  }
+
+  &-next {
+    color: $main-dark-color;
+  }
 }
