@@ -11,12 +11,13 @@ ul {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 @media (min-width: 320px) {
 
     .container {
-        min-width: 290px;
+        min-width: 320px;
         padding: 0 30px;
     }
 
@@ -122,6 +123,11 @@ ul {
     }
 
     .form {
+        width: 290px;
+        margin: 0 auto;
+        box-shadow: 0 0 5px 0 #ccc;
+        background-color: #fff;
+        padding-bottom: 34px;
 
         &-wrapper {
             position: relative;
@@ -139,9 +145,13 @@ ul {
             content: "";
             width: 16px;
             height: 16px;
-            outline: 2px solid rgb(238, 191, 62);
+            border: 2px solid transparent;
         }
+    }
 
+    .form-input:checked + .form-label::before {
+        background-color: rgb(238, 191, 62);
+        border: 2px solid #fff;
     }
 
     .btn {
@@ -184,6 +194,10 @@ ul {
         &-answered {
             color: rgb(254, 192, 42);
         }
+    }
+
+    .for-desktop {
+        display: none;
     }
 }
 
@@ -230,6 +244,8 @@ ul {
         &__questions {
             padding-left: 0;
             position: relative;
+            color: #282828;
+            display: inline-block;
 
             &-list {
             padding-left: 0;
@@ -244,15 +260,25 @@ ul {
 
     .btn-wrapper {
         position: absolute;
-        top: 52%;
-        left: 21%;
+        top: 44.4%;
+        left: 27%;
+    }
+
+    .form {
+        width: 690px;
+        padding-left: 40px;
+        padding-bottom: 65px;
+    }
+
+    .for-desktop {
+        display: none;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1500px) {
 
     .container {
-        min-width: 1140px;
+        min-width: 1500px;
     }
 
     .section-title {
@@ -280,6 +306,12 @@ ul {
             }
         }
 
+        &__answers {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
     }
 
     .testing {
@@ -293,9 +325,38 @@ ul {
         }
 
         &__description {
-            display: inline-block;
             margin-right: 126px;
+            height: 350px;
         }
     }
 
+    .not-for-desktop {
+        display: none;
+    }
+
+    .for-desktop {
+        display: table;
+
+        &__second-column {
+            width: 278px;
+            height: 350px;
+        }
+
+        &__third-column {
+            width: 360px;
+            height: 350px;
+        }
+
+        &__flex {
+            display: flex;
+        }
+    }
+
+    .count-wrapper {
+        position: absolute;
+    }
+
+    .form {
+        width: 1420px;
+    }
 }
