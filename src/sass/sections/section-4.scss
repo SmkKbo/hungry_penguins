@@ -299,7 +299,6 @@ ul {
             }
 
             &__description {
-                width: 262px;
                 height: auto;
                 margin: 0;
                 padding: 0;
@@ -325,8 +324,7 @@ ul {
         }
 
         &__description {
-            margin-right: 126px;
-            height: 350px;
+            width: 30%;
         }
     }
 
@@ -336,6 +334,7 @@ ul {
 
     .for-desktop {
         display: table;
+        display: flex;
 
         &__second-column {
             width: 278px;
@@ -358,8 +357,8 @@ ul {
         }
     }
 
-    .count-wrapper {
- 
+    .btn-wrapper {
+        position: static;
     }
 
     .form {
