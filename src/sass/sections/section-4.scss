@@ -121,10 +121,27 @@ ul {
         }
     }
 
-    .test-checkbox {
-        border: 2px solid rgb(238, 191, 62);
-        width: 16px;
-        height: 16px;
+    .form {
+
+        &-wrapper {
+            position: relative;
+        }
+
+        &-input {
+            position: absolute;
+            z-index: -1;
+            visibility: hidden;
+        }
+
+        &-label::before {
+            display: block;
+            margin: 0;
+            content: "";
+            width: 16px;
+            height: 16px;
+            outline: 2px solid rgb(238, 191, 62);
+        }
+
     }
 
     .btn {
