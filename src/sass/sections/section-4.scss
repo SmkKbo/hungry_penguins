@@ -340,6 +340,12 @@ ul {
         &__second-column {
             width: 278px;
             height: 350px;
+
+            &__questions {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+            }
         }
 
         &__third-column {
@@ -353,7 +359,7 @@ ul {
     }
 
     .count-wrapper {
-        position: absolute;
+ 
     }
 
     .form {
