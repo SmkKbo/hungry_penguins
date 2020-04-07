@@ -1,0 +1,157 @@
+$main-text-font: 'HelveticaNeueCyr', sans-serif;
+$section-title-font: 'Oswald', sans-serif;
+$main-dark-color: rgb(44, 44, 44);
+$secondary-dark-color:rgb(108, 110, 121);
+$yellow-accent-color: rgb(254, 192, 42);
+$main-light-color: rgb(255, 255, 255);
+
+@media(min-width: 320px) {
+
+.container {
+    width: 290px;
+    margin: 0 auto;
+}
+
+.section__teachers {
+    margin-top: 50px;;
+}
+
+.section-title {
+    margin-bottom: 38px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.teachers-list {
+
+    &__item {
+        width: 270px;
+        box-shadow: 0 0 20px 0 #ccc;
+    }
+
+}
+
+.img-wrap {
+    position: relative;
+
+    &__name {
+        display: inline-block;
+        position: absolute;
+
+        &-teacher {
+            position: absolute;
+            bottom: -18px;
+            left: 30px;
+            border: none;
+            height: 35px;
+            width: 218px;
+            background-color: rgb(95, 124, 236);
+            color: #ffffff;
+            text-align: center;
+            font-size: 14px;
+            line-height: 35px;
+            letter-spacing: 0.49px;
+            text-transform: uppercase;
+            font-family: $main-text-font;
+        }
+    }
+}
+
+.list-skills {
+    margin-top: 44px;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: $main-text-font;
+
+    &__item {
+        color: $secondary-dark-color;
+        padding-left: 16px;
+    }
+
+    &__descriptions {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 30px;
+        padding-left: 16px;
+        padding-bottom: 50px;
+        font-family: $main-text-font;
+    }
+
+}
+
+}
+
+@media(min-width: 768px) {
+
+.container {
+    min-width: 710px;
+}
+
+.section-teachers {
+    margin-top: 90px;
+    margin-bottom: 74px;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.teachers-list {
+    display: flex;
+    font-size: 16px;
+
+    &__item {
+        width: 380px;
+        height: 586px;
+    }
+
+    .list-skills {
+        font-size: 16px;
+
+        &__description {
+            font-size: 16px;
+        }
+    }
+
+}
+
+}
+
+@media (min-width: 1500px) {
+
+.container {
+    width: 1420px;
+}
+
+.section__teachers {
+    margin-top: 124px;
+    margin-bottom: 118px;
+}
+
+.section-title {
+    margin-bottom: 84px;
+    font-size: 30px;
+    line-height: 45px;
+}
+
+.img-wrap {
+
+    &__name-teacher {
+        text-shadow: 16px;
+    }
+    
+}
+
+.teachers-list {
+    justify-content: space-around;
+}
+
+.list-skills {
+    font-size: 16px;
+
+    &__descriptions {
+        font-size: 16px;
+    }
+}
+
+}
