@@ -1,4 +1,4 @@
-.container {
+.test-container {
   width: 290px;
   margin: 0 auto;
 }
@@ -7,12 +7,14 @@
   padding-top: 104px;
   padding-bottom: 26px;
   background-image: url(../../images/section-04/section-4-bg.svg);
-  @include bg-image;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0 0;
   position: relative;
 
   &::before {
     @include pseudo;
-    @include size(50px, 48px);
+    @include size(50px, 50px);
     position: absolute;
     top: 40px;
     left: 50%;
@@ -26,6 +28,7 @@
   @include font-settings(16px, 22px, 700);
   font-family: $main-text-font;
   color: $main-light-color;
+  letter-spacing: 0.48px;
   padding: 0 30px;
   margin-bottom: 24px;
   text-align: center;
@@ -34,6 +37,7 @@
 .test__field {
   background-color: $main-light-color;
   width: 290px;
+  margin: 0 auto;
   padding: 38px 30px;
   box-shadow: 0px 8px 40px 0px rgba(1, 1, 0, 0.08);
 }
@@ -41,6 +45,7 @@
 .section__title {
   @include font-settings(15px, 1, 700);
   font-family: $section-title-font;
+  letter-spacing: 0.9px;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 20px;
@@ -56,24 +61,25 @@
   font-family: $main-text-font;
   color: $secondary-dark-color;
   margin-bottom: 20px;
+  letter-spacing: 0.42px;
 }
 
 .test__title {
   @include font-settings(14px, 21px, 700);
   font-family: $main-text-font;
   color: $yellow-accent-color;
-  margin-bottom: 26px;
 }
 
 .test__question {
   @include font-settings(17px, 27px, 700);
   font-family: $main-text-font;
   color: $main-dark-color;
-  margin-bottom: 38px;
+  margin-bottom: 36px;
+  letter-spacing: 0.51px;
 }
 
 .test__options {
-  margin-bottom: 30px;
+  display: block;
 }
 
 .test__option-wrapper:not(:last-child) {
@@ -92,7 +98,9 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: max-content;
   padding-left: 30px;
+  margin-bottom: 14px;
 
   &::before {
     @include pseudo;
@@ -126,22 +134,29 @@
 }
 
 .test__counter-btn {
-  @include size(10px, 10px);
+  @include size(12px, 10px);
   @include bg-image;
   border: none;
   background-color: transparent;
-  background-image: url(../../images/section-04/right-arrow.svg);
   outline: transparent;
   cursor: pointer;
 
   &-prev {
-    transform: rotate(180deg);
+      background-image: url(../../images/section-04/left-arrow.svg);
+  }
+  &-next {
+      background-image: url(../../images/section-04/right-arrow.svg);
+  }
+
+  &-wrapper-desktop {
+    display: none;
   }
 }
 
 .test__counter-number {
   @include font-settings(14px, 18px, 700);
   font-family: $main-text-font;
+  letter-spacing: 0.7px;
 
   &-prev {
     color: $yellow-accent-color;
@@ -149,5 +164,194 @@
 
   &-next {
     color: $main-dark-color;
+  }
+}
+
+@media (max-width: 767px) {
+  .test__counter-tablet {
+    display: none;
+  }
+
+  .test__title {
+    margin-bottom: 26px;
+  }
+
+  .test__options {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .test-container {
+    width: 710px;
+  }
+
+  .test-section {
+    padding-top: 170px;
+    padding-bottom: 26px;
+
+    &::before {
+      @include size(68px, 68px);
+      top: 74px;
+    }
+  }
+
+  .test__text {
+    @include font-settings(20px, 25px, 700);
+    padding: 0 94px;
+    letter-spacing: 0.6px;
+  }
+
+  .test__field {
+    width: 680px;
+    padding: 40px;
+  }
+
+  .section__title {
+    @include font-settings(20px, 1, 700);
+    letter-spacing: 1.2px;
+    margin-bottom: 28px;
+  }
+
+  .test__about {
+    @include font-settings(16px, 30px);
+    letter-spacing: 0.48px;
+  }
+
+  .test__title {
+    color: $main-dark-color;
+  }
+
+  .test__title-wrapper {
+    margin-bottom: 36px;
+    display: flex;
+  }
+
+  .test__option-label {
+    @include font-settings(15px, 27px);
+  }
+
+  .test__option-name {
+    @include font-settings(15px, 27px);
+  }
+  .test__counter-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 786px) and (max-width: 1169px) {
+  .test__title {
+    margin-right: 60px;
+  }
+    .test__counter {
+      &-tablet {
+        display: flex;
+      }
+
+      &-mobile {
+        display: none;
+      }
+    }
+
+}
+
+@media (min-width: 1170px) {
+  .test-container {
+    width: 1420px;
+  }
+
+  .test-section {
+    padding-top: 260px;
+    padding-bottom: 66px;
+
+    &::before {
+      @include size(90px, 90px);
+      top: 120px;
+    }
+  }
+
+  .test__text {
+    @include font-settings(30px, 40px, 700);
+    padding: 0 322px;
+    margin-bottom: 64px;
+  }
+
+  .test__field {
+    width: 1420px;
+    padding: 120px 150px 216px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section__title {
+    @include font-settings(30px, 1, 700);
+    letter-spacing: 1.8px;
+    margin-bottom: 40px;
+  }
+
+  .test__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 56px;
+  }
+
+  .test__question {
+    margin-bottom: 56px;
+  }
+
+  .test__counter-btn-wrapper-desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .test__counter-btn-desktop {
+      @include font-settings(11px, 1, 700);
+      font-family: $main-text-font;
+      color: $secondary-dark-color;
+      text-transform: uppercase;
+      border: transparent;
+      outline: transparent;
+      background-color: transparent;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &-prev {
+        padding-left: 36px;
+        background-image: url(../../images/section-04/left-arrow.svg);
+      }
+
+      &-next {
+        padding-right: 36px;
+        background-image: url(../../images/section-04/right-arrow.svg);
+        background-position: center right;
+      }
+    }
+  
+  .test__counter-btn-mobile {
+    display: none;
+  }
+
+  .test__field-wrapper-top {
+    flex-basis: 268px;
+  }
+
+  .test__field-wrapper-middle {
+    flex-basis: 274px;
+  }
+
+  .test {
+    flex-basis: 330px;
+
+    &__options {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__option-wrapper {
+      width: 138px;
+    }
   }
 }
