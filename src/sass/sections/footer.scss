@@ -169,6 +169,7 @@
   .footer__btn-apply {
     @include font-settings(16px, 26px, 700);
     letter-spacing: 0.48px;
+    margin: 0;
   }
 }
 
