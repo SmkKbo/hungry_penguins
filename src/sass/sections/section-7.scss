@@ -8,12 +8,11 @@ $main-light-color: rgb(255, 255, 255);
 @media (min-width: 320px) {
 
 .container {
-    width: 290px;
+    width: 270px;
     margin: 0 auto;
 }
 
 .section__teachers {
-    overflow: hidden;
     margin-top: 50px;
 }
 
@@ -21,6 +20,21 @@ $main-light-color: rgb(255, 255, 255);
     margin-bottom: 20px;
     text-align: center;
     text-transform: uppercase;
+
+    &::before {
+        display: inline-block;
+        content: '[';
+        color: rgb(254, 192, 42);
+        @include size(10px, 30px);
+        margin-right: 6px;
+      }
+      &::after {
+        display: inline-block;
+        content: ']';
+        color: rgb(254, 192, 42);
+        @include size(10px, 45px);
+        margin-left: 6px;
+      }
 
     &__teachers-list {
         position: relative;
@@ -50,25 +64,25 @@ $main-light-color: rgb(255, 255, 255);
         box-shadow: 1.5px 2.598px 9px 0px rgba(2, 2, 1, 0.1);
 
         &-prev {
-            background-image: url(../images/section-7/icons__section-7/back.svg);
+            transform: translateX(-50%);
         }
 
         &-next {
-            background-image: url(../images/section-7/icons__section-7/next.svg);
+            transform: translateX(50%);
         }
     }
 
 }
 
 .icon__social-svg {
-    fill: red;
-    height: 12px;
-    width: 12px;
+    fill: #ccc;
+    width: 16px;
+    height: auto;
 }
 
 .section-title__slider-ctrl:hover
 .icon__social-svg {
-    fill: blue;
+    fill: rgb(95, 124, 236);
 }
 
 .img-wrap {
@@ -100,7 +114,6 @@ $main-light-color: rgb(255, 255, 255);
 .teachers-list {
 
     &__item {
-        width: 290px;
         box-shadow: 0 0 20px 0 #ccc;
 
         &__desktop {
@@ -108,6 +121,10 @@ $main-light-color: rgb(255, 255, 255);
         }
     }
 
+}
+
+.teacher__photo {
+    height: auto;
 }
 
 .list-skills {
@@ -141,6 +158,7 @@ $main-light-color: rgb(255, 255, 255);
 .section-teachers {
     margin-top: 45px;
     margin-bottom: 38px;
+    overflow: hidden;
 }
 
 .section-title {
