@@ -23,10 +23,6 @@
   }
 }
 
-.reviews__list {
-  position: relative;
-}
-
 .reviews__card {
   width: 270px;
   margin: 0 auto;
@@ -210,6 +206,10 @@
 
   .reviews__list-button-wrapper {
     width: 420px;
+  }
+
+  .reviews__list-button {
+    @include size(50px, 50px);
   }
 }
 
