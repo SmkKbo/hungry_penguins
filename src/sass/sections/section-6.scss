@@ -1,0 +1,54 @@
+.study-format {
+  @include bg-image;
+  background-image: url(../../images/section-06/section-06-bg.svg);
+
+  h2 {
+    margin-bottom: 70px;
+  }
+}
+
+.study-format__container {
+  width: 270px;
+  margin: 0 auto;
+}
+
+.study-format__item {
+  padding-left: 38px;
+  position: relative;
+
+  &::before {
+    @include pseudo;
+    @include size(18px, 18px);
+    @include bg-image;
+    position: absolute;
+    left: 0;
+    top: 5px;
+  }
+
+  &-first::before {
+    background-image: url(../../images/section-06/star-pink.svg);
+  }
+
+  &-second::before {
+    background-image: url(../../images/section-06/star-yellow.svg);
+  }
+
+  &-third::before {
+    background-image: url(../../images/section-06/star-blue.svg);
+  }
+
+}
+
+
+.study-format__item-title {
+  @include font-settings(20px, 30px, 700);
+  font-family: $main-text-font;
+  color: $main-dark-color;
+  margin-bottom: 14px;
+}
+
+.study-format__item-descr {
+  @include font-settings(14px, 24px);
+  font-family: $main-text-font;
+  color: $secondary-dark-color;
+}
