@@ -12,13 +12,13 @@
 .section__title {
   @include font-settings(15px, 1, 700);
   letter-spacing: 0.96px;
-  font-family: 'Oswald', sans-serif;
+  font-family: $section-title-font;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
 
   &-bracket {
-    color: rgb(254, 192, 42);
+    color: $yellow-accent-color;
     margin: 0 8px;
   }
 }
@@ -29,8 +29,8 @@
   padding-top: 40px;
   padding-bottom: 40px;
   text-align: center;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.07);
+  background-color: $main-light-color;
+  box-shadow: 0px 10px 30px 0px rgba(2, 2, 1, 0.1);
 }
 
 .reviews__card-image {
@@ -42,11 +42,10 @@
 }
 
 .reviews__text-wrapper {
-  padding-right: 28px;
-  padding-left: 28px;
+  padding: 0 28px;
 
   &::before {
-    @include pseudo ($display: block);
+    @include pseudo;
     @include size(17px, 12px);
     @include bg-image ($size: contain);
     margin: 0 auto;
@@ -57,8 +56,8 @@
 
 .reviews__card-name {
   @include font-settings(21px, 30px, 700);
-  font-family: 'HelveticaNeueCyr', sans-serif;
-  color: rgb(44, 44, 44);
+  font-family: $main-text-font;
+  color: $main-dark-color;
   letter-spacing: 0.63px;
   margin-bottom: 20px;
 }
@@ -66,11 +65,11 @@
 .reviews__card-text {
   @include font-settings(14px, 24px);
   letter-spacing: 0.42px;
-  font-family: 'HelveticaNeueCyr', sans-serif;
-  color: rgb(108, 110, 121);
+  font-family: $main-text-font;
+  color: $secondary-dark-color;
 
   &-link {
-    color: rgb(254, 192, 42);
+    color: $yellow-accent-color;
     display: block;
   }
 }
@@ -89,7 +88,7 @@
   @include size(40px, 40px);
   border-radius: 50%;
   border: none;
-  background-color: rgb(255, 255, 255);
+  background-color: $main-light-color;
   box-shadow: 2px 3px 9px 0px rgba(2, 2, 1, 0.1);
   display: flex;
   justify-content: center;
@@ -97,7 +96,7 @@
   cursor: pointer;
 
   &-icon {
-    @include size(16px, 12px);
+    @include size(16px, 16px);
     fill: rgb(95, 124, 236);
 
     &--inactive {
@@ -110,10 +109,6 @@
 .btn-prev {
   display: block;
   @include bg-image;
-}
-
-.btn-prev {
-  transform: rotate(180deg);
 }
 
 @media (max-width: 767px) {

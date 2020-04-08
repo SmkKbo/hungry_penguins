@@ -1,7 +1,6 @@
 .study-format {
   padding-top: 30px;
   padding-bottom: 70px;
-  margin-bottom: 26px;
   @include bg-image;
   background-image: url(../../images/section-06/section-06-bg.svg);
   position: relative;
@@ -100,18 +99,17 @@
       @include size(360px, 360px);
       bottom: 26px;
       right: -70px;
-
     }
+  }
+
+  .study-format__container {
+    width: 710px;
   }
 
   .study-format__title {
     @include font-settings(20px, 1, 700);
     letter-spacing: 1.2px;
     margin-bottom: 90px;
-  }
-
-  .study-format__container {
-    width: 710px;
   }
 
   .study-format__item {

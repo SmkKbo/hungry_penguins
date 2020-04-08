@@ -11,18 +11,18 @@
 .section__title {
   @include font-settings(15px, 1, 700);
   letter-spacing: 0.96px;
-  font-family: 'Oswald', sans-serif;
+  font-family: $section-title-font;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 24px;
 
   &-bracket-open {
-    color: rgb(254, 192, 42);
+    color: $yellow-accent-color;
     margin-right: 8px;
   }
 
   &-bracket-close {
-    color: rgb(254, 192, 42);
+    color: $yellow-accent-color;
     margin-left: 8px;
   }
 }
@@ -39,8 +39,7 @@
   }
 
   &::before {
-    display: block;
-    content: '';
+    @include pseudo;
     margin: 0 auto;
     @include size(142px, 142px);
     @include bg-image;
@@ -63,8 +62,8 @@
 
 .courses-elements__list-item-title {
   @include font-settings(20px, 25px, 700);
-  font-family: 'HelveticaNeueCyr', sans-serif;
-  color: rgb(44, 44, 44);
+  font-family: $main-text-font;
+  color: $main-dark-color;
   margin-bottom: 18px;
   letter-spacing: 0.6px;
 
@@ -90,19 +89,18 @@
 
 .courses-elements__list-item-description {
   @include font-settings(14px, 24px);
-  font-family: 'HelveticaNeueCyr',
-    sans-serif;
-  color: rgb(107, 111, 122);
+  font-family: $main-text-font;
+  color: $secondary-dark-color;
   letter-spacing: 0.42px;
 }
 
 .courses-elements-btn {
-  background-color: rgb(254, 194, 64);
+  background-color: $yellow-accent-color;
   box-shadow: 0px 13px 17.1px 0.9px rgba(238, 193, 77, 0.4);
   @include size(270px, 54px);
   border-radius: 28px;
   @include font-settings(13px, 54px, 700);
-  color: rgb(255, 255, 255);
+  color: $main-light-color;
   border: none;
   display: block;
   margin: 0 auto;
@@ -198,7 +196,6 @@
       margin-bottom: 48px;
     }
   }
-
 
   .courses-elements__list-item-title {
     @include font-settings(30px, 30px, 700);

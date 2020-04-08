@@ -20,7 +20,7 @@
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
-    @include bg-image($size: contain);
+    @include bg-image;
     background-image: url(../../images/section-04/icon-sputnik-3.svg);
   }
 }
@@ -243,7 +243,7 @@
   }
 }
 
-@media (min-width: 786px) and (max-width: 1169px) {
+@media (min-width: 786px) and (max-width: 1419px) {
   .test__title {
     margin-right: 60px;
   }
@@ -260,7 +260,7 @@
 
 }
 
-@media (min-width: 1170px) {
+@media (min-width: 1420px) {
   .test-container {
     width: 1420px;
   }
@@ -314,6 +314,7 @@
     @include font-settings(11px, 1, 700);
     font-family: $main-text-font;
     color: $secondary-dark-color;
+    letter-spacing: 0.55px;
     text-transform: uppercase;
     border: transparent;
     outline: transparent;

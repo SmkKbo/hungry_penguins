@@ -1,5 +1,7 @@
-$main-text-font: 'HelveticaNeueCyr', sans-serif;
-$section-title-font: 'Oswald', sans-serif;
+$main-text-font: 'HelveticaNeueCyr',
+sans-serif;
+$section-title-font: 'Oswald',
+sans-serif;
 $main-dark-color: rgb(44, 44, 44);
 $secondary-dark-color:rgb(108, 110, 121);
 $yellow-accent-color: rgb(254, 192, 42);
@@ -7,279 +9,279 @@ $main-light-color: rgb(255, 255, 255);
 
 @media (min-width: 320px) {
 
-.container {
+  .container {
     width: 270px;
     margin: 0 auto;
-}
+  }
 
-.section__teachers {
+  .section__teachers {
     margin-top: 50px;
-}
+  }
 
-.section-title {
+  .section-title {
     margin-bottom: 20px;
     text-align: center;
     text-transform: uppercase;
 
     &::before {
-        display: inline-block;
-        content: '[';
-        color: rgb(254, 192, 42);
-        @include size(10px, 30px);
-        margin-right: 6px;
-      }
-      &::after {
-        display: inline-block;
-        content: ']';
-        color: rgb(254, 192, 42);
-        @include size(10px, 45px);
-        margin-left: 6px;
-      }
+      display: inline-block;
+      content: '[';
+      color: rgb(254, 192, 42);
+      @include size(10px, 30px);
+      margin-right: 6px;
+    }
+
+    &::after {
+      display: inline-block;
+      content: ']';
+      color: rgb(254, 192, 42);
+      @include size(10px, 45px);
+      margin-left: 6px;
+    }
 
     &__teachers-list {
-        position: relative;
+      position: relative;
     }
 
     &__slider-button {
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        width: 100%;
-        top: 120px;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      width: 100%;
+      top: 120px;
     }
 
     &__slider-ctrl {
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        background-color: rgb(255, 255, 255);
-        border: none;
-        cursor: pointer;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        background-size: 30%;
-        background-repeat: no-repeat;
-        background-position: center;
-        box-shadow: 1.5px 2.598px 9px 0px rgba(2, 2, 1, 0.1);
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: rgb(255, 255, 255);
+      border: none;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+      background-size: 30%;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: 1.5px 2.598px 9px 0px rgba(2, 2, 1, 0.1);
 
-        &-prev {
-            transform: translateX(-50%);
-        }
+      &-prev {
+        transform: translateX(-50%);
+      }
 
-        &-next {
-            transform: translateX(50%);
-        }
+      &-next {
+        transform: translateX(50%);
+      }
     }
 
-}
+  }
 
-.icon__social-svg {
+  .icon__social-svg {
     fill: #ccc;
     width: 16px;
     height: auto;
-}
+  }
 
-.section-title__slider-ctrl:hover
-.icon__social-svg {
+  .section-title__slider-ctrl:hover .icon__social-svg {
     fill: rgb(95, 124, 236);
-}
+  }
 
-.img-wrap {
+  .img-wrap {
     position: relative;
 
     &__name {
-        display: inline-block;
+      display: inline-block;
+      position: absolute;
+
+      &-teacher {
         position: absolute;
-
-        &-teacher {
-            position: absolute;
-            bottom: -18px;
-            left: 30px;
-            border: none;
-            height: 35px;
-            width: 218px;
-            background-color: rgb(95, 124, 236);
-            color: #ffffff;
-            text-align: center;
-            font-size: 14px;
-            line-height: 35px;
-            letter-spacing: 0.49px;
-            text-transform: uppercase;
-            font-family: $main-text-font;
-        }
+        bottom: -18px;
+        left: 30px;
+        border: none;
+        height: 35px;
+        width: 218px;
+        background-color: rgb(95, 124, 236);
+        color: #ffffff;
+        text-align: center;
+        font-size: 14px;
+        line-height: 35px;
+        letter-spacing: 0.49px;
+        text-transform: uppercase;
+        font-family: $main-text-font;
+      }
     }
-}
+  }
 
-.teachers-list {
+  .teachers-list {
 
     &__item {
-        box-shadow: 0 0 20px 0 #ccc;
+      box-shadow: 0 0 20px 0 #ccc;
 
-        &__desktop {
-            display: none;
-        }
+      &__desktop {
+        display: none;
+      }
     }
 
-}
+  }
 
-.teacher__photo {
+  .teacher__photo {
     height: auto;
-}
+  }
 
-.list-skills {
+  .list-skills {
     margin-top: 44px;
     font-size: 14px;
     line-height: 30px;
     font-family: $main-text-font;
 
     &__item {
-        color: $secondary-dark-color;
-        padding-left: 16px;
+      color: $secondary-dark-color;
+      padding-left: 16px;
     }
 
     &__descriptions {
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 30px;
-        padding-left: 16px;
-        padding-bottom: 50px;
-        font-family: $main-text-font;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 30px;
+      padding-left: 16px;
+      padding-bottom: 50px;
+      font-family: $main-text-font;
     }
-}
+  }
 }
 
 @media (min-width: 768px) {
 
-.container {
+  .container {
     width: 100%;
-}
+  }
 
-.section-teachers {
+  .section-teachers {
     margin-top: 45px;
     margin-bottom: 38px;
     overflow: hidden;
-}
+  }
 
-.section-title {
+  .section-title {
     margin-bottom: 50px;
 
     &__slider-button {
-        width: 384px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 45%;
+      width: 384px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 45%;
     }
 
     &__slider-ctrl {
-        height: 52px;
-        width: 52px;
+      height: 52px;
+      width: 52px;
 
-        &-prev {
-            transform: translateX(-50%);
+      &-prev {
+        transform: translateX(-50%);
 
-        }
+      }
 
-        &-next {
-            transform: translateX(50%);
-        }
+      &-next {
+        transform: translateX(50%);
+      }
     }
-}
+  }
 
-.teachers-list {
+  .teachers-list {
     display: flex;
     justify-content: center;
     font-size: 16px;
 
     &__item {
-        width: 380px;
-        height: 586px;
-        flex-shrink: 0;
+      width: 380px;
+      height: 586px;
+      flex-shrink: 0;
 
-        &__desktop {
-            display: table;
-        }
+      &__desktop {
+        display: table;
+      }
     }
-}
+  }
 
-    .first-teacher {
-        order: 2;
+  .first-teacher {
+    order: 2;
+  }
+
+  .second-teacher {
+    order: 1;
+    transform: translateX(-60px);
+  }
+
+  .third-teacher {
+    order: 3;
+    transform: translateX(60px);
+  }
+
+  .list-skills {
+    font-size: 16px;
+
+    &__item {
+      padding-left: 24px;
+      padding-right: 30px;
     }
 
-    .second-teacher {
-        order: 1;
-        transform: translateX(-60px);
+    &__descriptions {
+      padding-right: 30px;
+      margin-top: 20px;
+      font-size: 16px;
+      padding-bottom: 0;
+      padding-left: 24px;
     }
-
-    .third-teacher {
-        order: 3;
-        transform: translateX(60px);
-    }
-
-    .list-skills {
-        font-size: 16px;
-
-        &__item {
-            padding-left: 24px;
-            padding-right: 30px;
-        }
-
-        &__descriptions {
-            padding-right: 30px;
-            margin-top: 20px;
-            font-size: 16px;
-            padding-bottom: 0;
-            padding-left: 24px;
-        }
-    }
+  }
 }
 
 @media (min-width: 1500px) {
 
-.container {
+  .container {
     width: 1420px;
-}
+  }
 
-.section__teachers {
+  .section__teachers {
     margin-top: 62px;
     margin-bottom: 60px;
-}
+  }
 
-.section-title {
+  .section-title {
     margin-bottom: 84px;
     font-size: 30px;
     line-height: 45px;
 
     &__slider-button {
-        width: 100%;
+      width: 100%;
     }
 
-}
+  }
 
-.img-wrap {
+  .img-wrap {
 
     &__name-teacher {
-        text-shadow: 16px;
+      text-shadow: 16px;
     }
-    
-}
 
-.teachers-list {
+  }
+
+  .teachers-list {
     justify-content: space-around;
 
     &__item {
-        
-        &__desktop {
-            display: table;
-        }
-    }
-}
 
-.list-skills {
+      &__desktop {
+        display: table;
+      }
+    }
+  }
+
+  .list-skills {
     font-size: 16px;
 
     &__descriptions {
-        font-size: 16px;
+      font-size: 16px;
     }
-}
+  }
 }

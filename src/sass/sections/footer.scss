@@ -2,7 +2,7 @@
   @include bg-image($pos: 0 0);
   padding-top: 30px;
   padding-bottom: 30px;
-  font-family: 'HelveticaNeueCyr', sans-serif;
+  font-family: $main-text-font;
   background-image: url(../../images/footer/footer-bg.svg);
   overflow: hidden;
 }
@@ -27,21 +27,21 @@
   &-address,
   &-list {
     @include font-settings(14px, 24px);
-    color: rgba(44, 44, 44, 0.851);
+    color: rgba($main-dark-color, 0.851);
     letter-spacing: 0.56px;
   }
 
   &-list-item-link {
-    color: rgba(44, 44, 44, 0.851);
+    color: rgba($main-dark-color, 0.851);
   }
 }
 
 .footer__btn-apply {
   display: block;
-  text-align: center;
+  margin: 0 auto;
   @include font-settings(13px, 16px, 700);
   @include size(270px, 54px);
-  color: rgb(255, 255, 255);
+  color: $main-light-color;
   letter-spacing: 0.39px;
   text-align: center;
   background-image: linear-gradient(to left, rgb(193, 73, 231) 0%, rgb(133, 166, 246) 100%);
@@ -118,7 +118,7 @@
   transition: color 200ms linear;
 
   &:hover {
-    color: rgb(254, 192, 42);
+    color: $yellow-accent-color;
   }
 }
 
