@@ -5,7 +5,7 @@ $secondary-dark-color:rgb(108, 110, 121);
 $yellow-accent-color: rgb(254, 192, 42);
 $main-light-color: rgb(255, 255, 255);
 
-@media(min-width: 320px) {
+@media (min-width: 320px) {
 
 .container {
     width: 290px;
@@ -13,22 +13,62 @@ $main-light-color: rgb(255, 255, 255);
 }
 
 .section__teachers {
-    margin-top: 50px;;
+    overflow: hidden;
+    margin-top: 50px;
 }
 
 .section-title {
-    margin-bottom: 38px;
+    margin-bottom: 20px;
     text-align: center;
     text-transform: uppercase;
-}
 
-.teachers-list {
-
-    &__item {
-        width: 270px;
-        box-shadow: 0 0 20px 0 #ccc;
+    &__teachers-list {
+        position: relative;
     }
 
+    &__slider-button {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        top: 120px;
+    }
+
+    &__slider-ctrl {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        border: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+        background-size: 30%;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 1.5px 2.598px 9px 0px rgba(2, 2, 1, 0.1);
+
+        &-prev {
+            background-image: url(../images/section-7/icons__section-7/back.svg);
+        }
+
+        &-next {
+            background-image: url(../images/section-7/icons__section-7/next.svg);
+        }
+    }
+
+}
+
+.icon__social-svg {
+    fill: red;
+    height: 12px;
+    width: 12px;
+}
+
+.section-title__slider-ctrl:hover
+.icon__social-svg {
+    fill: blue;
 }
 
 .img-wrap {
@@ -57,6 +97,19 @@ $main-light-color: rgb(255, 255, 255);
     }
 }
 
+.teachers-list {
+
+    &__item {
+        width: 290px;
+        box-shadow: 0 0 20px 0 #ccc;
+
+        &__desktop {
+            display: none;
+        }
+    }
+
+}
+
 .list-skills {
     margin-top: 44px;
     font-size: 14px;
@@ -76,45 +129,91 @@ $main-light-color: rgb(255, 255, 255);
         padding-bottom: 50px;
         font-family: $main-text-font;
     }
-
+}
 }
 
-}
-
-@media(min-width: 768px) {
+@media (min-width: 768px) {
 
 .container {
-    min-width: 710px;
+    width: 100%;
 }
 
 .section-teachers {
-    margin-top: 90px;
-    margin-bottom: 74px;
+    margin-top: 45px;
+    margin-bottom: 38px;
 }
 
 .section-title {
     margin-bottom: 50px;
+
+    &__slider-button {
+        width: 384px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 45%;
+    }
+
+    &__slider-ctrl {
+        height: 52px;
+        width: 52px;
+
+        &-prev {
+            transform: translateX(-50%);
+
+        }
+
+        &-next {
+            transform: translateX(50%);
+        }
+    }
 }
 
 .teachers-list {
     display: flex;
+    justify-content: center;
     font-size: 16px;
 
     &__item {
         width: 380px;
         height: 586px;
+        flex-shrink: 0;
+
+        &__desktop {
+            display: table;
+        }
+    }
+}
+
+    .first-teacher {
+        order: 2;
+    }
+
+    .second-teacher {
+        order: 1;
+        transform: translateX(-60px);
+    }
+
+    .third-teacher {
+        order: 3;
+        transform: translateX(60px);
     }
 
     .list-skills {
         font-size: 16px;
 
-        &__description {
+        &__item {
+            padding-left: 24px;
+            padding-right: 30px;
+        }
+
+        &__descriptions {
+            padding-right: 30px;
+            margin-top: 20px;
             font-size: 16px;
+            padding-bottom: 0;
+            padding-left: 24px;
         }
     }
-
-}
-
 }
 
 @media (min-width: 1500px) {
@@ -124,14 +223,19 @@ $main-light-color: rgb(255, 255, 255);
 }
 
 .section__teachers {
-    margin-top: 124px;
-    margin-bottom: 118px;
+    margin-top: 62px;
+    margin-bottom: 60px;
 }
 
 .section-title {
     margin-bottom: 84px;
     font-size: 30px;
     line-height: 45px;
+
+    &__slider-button {
+        width: 100%;
+    }
+
 }
 
 .img-wrap {
@@ -144,6 +248,13 @@ $main-light-color: rgb(255, 255, 255);
 
 .teachers-list {
     justify-content: space-around;
+
+    &__item {
+        
+        &__desktop {
+            display: table;
+        }
+    }
 }
 
 .list-skills {
@@ -153,5 +264,4 @@ $main-light-color: rgb(255, 255, 255);
         font-size: 16px;
     }
 }
-
 }
