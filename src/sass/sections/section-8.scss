@@ -7,11 +7,6 @@ $main-light-color: rgb(255, 255, 255);
 
 @media (min-width: 320px) {
 
-.container {
-    width: 290px;
-    margin: 0 auto;
-}
-
 .section__sertificate {
     padding-top: 40px;
     background-image: url(../images/section-8/section-bg.svg);
@@ -48,13 +43,7 @@ $main-light-color: rgb(255, 255, 255);
 }
 
 .sertificate__title {
-  font-family: $section-title-font;
-  font-weight: 700;
-  font-size: 15px;
-  text-align: center;
-  text-transform: uppercase;
   color: $main-light-color;
-  margin-bottom: 0;
 
   &::before {
       display: inline-block;
@@ -75,11 +64,6 @@ $main-light-color: rgb(255, 255, 255);
 }
 
 @media (min-width: 768px) {
-
-.container {
-  width: 710px;
-  margin: 0 auto;
-}
 
 .section__sertificate {
   margin-top: 50px;
@@ -118,8 +102,6 @@ $main-light-color: rgb(255, 255, 255);
 
 .sertificate__title {
   text-align: left;
-  font-size: 20px;
-  line-height: 45px;
   margin-bottom: 44px;
 }
 
@@ -139,10 +121,6 @@ $main-light-color: rgb(255, 255, 255);
 }
 
 @media (min-width: 1500px) {
-
-.container {
-  width: 1420px;
-}
 
 .section__sertificate {
   padding-top: 200px;
