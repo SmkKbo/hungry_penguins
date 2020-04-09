@@ -125,117 +125,117 @@
     }
   }
 
-@media (min-width: 768px) {
-  .section__teachers {
-    padding-top: 45px;
-    padding-bottom: 38px;
-  }
-
-  .section-title {
-    margin-bottom: 50px;
-
-    &__slider-button {
-      width: 384px;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 45%;
+  @media (min-width: 768px) {
+    .section__teachers {
+      padding-top: 45px;
+      padding-bottom: 38px;
     }
 
-    &__slider-ctrl {
-      height: 52px;
-      width: 52px;
+    .section-title {
+      margin-bottom: 50px;
 
-      &-prev {
+      &__slider-button {
+        width: 384px;
+        left: 50%;
         transform: translateX(-50%);
-
+        top: 45%;
       }
 
-      &-next {
-        transform: translateX(50%);
+      &__slider-ctrl {
+        height: 52px;
+        width: 52px;
+
+        &-prev {
+          transform: translateX(-50%);
+
+        }
+
+        &-next {
+          transform: translateX(50%);
+        }
       }
     }
-  }
 
-  .teachers-list {
-    display: flex;
-    justify-content: center;
-    font-size: 16px;
-
-    &__item {
-      width: 380px;
-      padding-bottom: 30px;
-      flex-shrink: 0;
-
-      &__desktop {
-        display: block;
-      }
-    }
-  }
-
-  .first-teacher {
-    order: 2;
-  }
-
-  .second-teacher {
-    order: 1;
-    transform: translateX(-60px);
-  }
-
-  .third-teacher {
-    order: 3;
-    transform: translateX(60px);
-  }
-
-  .list-skills {
-    font-size: 16px;
-
-    &__item {
-      padding-left: 24px;
-      padding-right: 30px;
-    }
-
-    &__descriptions {
-      padding-right: 30px;
-      margin-top: 20px;
+    .teachers-list {
+      display: flex;
+      justify-content: center;
       font-size: 16px;
-      padding-bottom: 0;
-      padding-left: 24px;
-    }
-  }
-}
 
-@media (min-width: 1420px) {
+      &__item {
+        width: 380px;
+        padding-bottom: 30px;
+        flex-shrink: 0;
 
-  .section__teachers {
-    margin-top: 62px;
-    margin-bottom: 60px;
-  }
-
-  .section-title {
-
-    &__slider-button {
-      width: 100%;
+        &__desktop {
+          display: block;
+        }
+      }
     }
 
-  }
-
-  .img-wrap {
-
-    &__name-teacher {
-      text-shadow: 16px;
+    .first-teacher {
+      order: 2;
     }
 
-  }
+    .second-teacher {
+      order: 1;
+      transform: translateX(-60px);
+    }
 
-  .teachers-list {
-    justify-content: space-around;
-  }
+    .third-teacher {
+      order: 3;
+      transform: translateX(60px);
+    }
 
-  .list-skills {
-    font-size: 16px;
-
-    &__descriptions {
+    .list-skills {
       font-size: 16px;
+
+      &__item {
+        padding-left: 24px;
+        padding-right: 30px;
+      }
+
+      &__descriptions {
+        padding-right: 30px;
+        margin-top: 20px;
+        font-size: 16px;
+        padding-bottom: 0;
+        padding-left: 24px;
+      }
     }
   }
-}
+
+  @media (min-width: 1420px) {
+
+    .section__teachers {
+      margin-top: 62px;
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+
+      &__slider-button {
+        width: 100%;
+      }
+
+    }
+
+    .img-wrap {
+
+      &__name-teacher {
+        text-shadow: 16px;
+      }
+
+    }
+
+    .teachers-list {
+      justify-content: space-around;
+    }
+
+    .list-skills {
+      font-size: 16px;
+
+      &__descriptions {
+        font-size: 16px;
+      }
+    }
+  }
