@@ -7,13 +7,14 @@ $main-light-color: rgb(255, 255, 255);
 
 @media (min-width: 320px) {
 
-.container {
+.section__teachers--container {
     width: 270px;
     margin: 0 auto;
 }
 
 .section__teachers {
     margin-top: 50px;
+    overflow: hidden;
 }
 
 .section-title {
@@ -151,7 +152,7 @@ $main-light-color: rgb(255, 255, 255);
 
 @media (min-width: 768px) {
 
-.container {
+.section__teachers--container {
     width: 100%;
 }
 
@@ -236,7 +237,7 @@ $main-light-color: rgb(255, 255, 255);
 
 @media (min-width: 1500px) {
 
-.container {
+.section__teachers-container {
     width: 1420px;
 }
 
