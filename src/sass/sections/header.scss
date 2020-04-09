@@ -9,7 +9,7 @@
     min-height: 540px;
     height: 291px;
     text-align: center;
-    background: no-repeat url("../images/header/header-bg.png") center top;
+    background: no-repeat url("../images/header/header-bg-mobile.png") center top;
     object-fit: cover;
     background-size: cover;
     background-color: white;
@@ -60,6 +60,7 @@
     }
   
   @media (min-width: 320px) and (max-width: 424px) {
+    
     
     .container {
       padding: 0 10px;
@@ -137,7 +138,7 @@
   
   @media (min-width: 1024px) and (max-width: 1439px) {
     .container {
-      width: 940px;
+      width: 670px;
       margin: 0 auto;
     }
   
@@ -176,7 +177,8 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-    }
+      padding: 0 100px;
+    
   }
   
   @media (min-width: 1440px) and (max-width: 2560px) {
@@ -226,4 +228,5 @@
     .team__item-text {
       font-size: 16px;
     }
+    }  
   }
