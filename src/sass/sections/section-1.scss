@@ -1,0 +1,30 @@
+$main-text-font: 'HelveticaNeueCyr', sans-serif;
+$section-title-font: 'Oswald', sans-serif;
+$main-dark-color: rgb(44, 44, 44);
+$secondary-dark-color:rgb(108, 110, 121);
+$yellow-accent-color: rgb(254, 192, 42);
+$main-light-color: rgb(255, 255, 255);
+
+@media (min-width: 320px) {
+
+.section__anounce {
+    background-image: url(../images/section-1/section-1-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 24px;
+
+    &--title {
+        font-family: $main-text-font;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+
+    }
+
+    &--text {
+        color: $yellow-accent-color;
+    }
+}
+
+}
