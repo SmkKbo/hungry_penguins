@@ -100,6 +100,29 @@
       font-family: $main-text-font;
       color: $main-light-color;
       letter-spacing: 0.75px;
+      transition: all 200ms linear;
+      position: relative;
+
+      &::after {
+        @include pseudo;
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: rgb(252, 191, 44);
+        margin-top: 8px;
+        transition: all 200ms linear;
+      }
+
+      &:hover::after,
+      &:focus::after {
+        width: 100%;
+      }
+
+      &:hover,
+      &:focus {
+        color: rgb(252, 191, 44);
+      }
 
       &:not(:last-child) {
         margin-right: 72px;
@@ -151,33 +174,9 @@
     &__link {
       @include font-settings(23px, 23px);
       letter-spacing: 1.15px;
-      transition: all 200ms linear;
-      position: relative;
-
-      &::after {
-        @include pseudo;
-        position: absolute;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background-color: rgb(252, 191, 44);
-        margin-top: 8px;
-        transition: all 200ms linear;
-      }
-
-      &:hover::after,
-      &:focus::after {
-        width: 100%;
-      }
-
 
       &:not(:last-child) {
         margin-right: 92px;
-      }
-
-      &:hover,
-      &:focus {
-        color: rgb(252, 191, 44);
       }
     }
   }
