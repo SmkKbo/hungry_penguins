@@ -3,13 +3,12 @@
   padding-bottom: 26px;
 
   &-container {
-    width: 270px;
-    margin: 0 auto;
     position: relative;
   }
 
   &__list {
     padding-top: 40px;
+    position: relative;
   }
 }
 
@@ -117,10 +116,6 @@
   .reviews {
     padding-top: 36px;
     padding-bottom: 52px;
-
-    &-container {
-      width: 710px;
-    }
   }
 
   .reviews__list {
@@ -153,7 +148,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1219px) {
+@media (min-width: 768px) and (max-width: 1419px) {
   .reviews-container--tablet {
     width: 100%;
   }
@@ -192,14 +187,10 @@
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 1420px) {
   .reviews {
     padding-top: 56px;
     padding-bottom: 84px;
-
-    &-container {
-      width: 1220px;
-    }
   }
 
   .reviews__list {
