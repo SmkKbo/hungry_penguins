@@ -33,7 +33,6 @@
     @include font-settings(20px, 34px);
     font-family: "Mistral", cursive;
     color: $yellow-accent-color;
-    margin-bottom: 4px;
   }
 
   .heroes__list-item-text {
@@ -90,7 +89,9 @@
 
     .heroes__list-item {
       display: flex;
+      flex-basis: 570px;
       align-items: center;
+      justify-content: space-between;
       position: relative;
 
       &:not(:last-child) {
@@ -102,14 +103,10 @@
       text-align: left;
     }
 
-    .heroes__list-item-photo {
-      margin-right: 44px;
-    }
-
     .heroes__list-item-title {
       @include font-settings(30px, 1);
       position: absolute;
-      bottom: 5%;
+      bottom: 0;
       left: 45%;
 
       &-mobile {
@@ -130,13 +127,13 @@
 
       &-mark::before {
         @include size(55px, 36px);
-        left: -55%;
+        left: -60%;
         content: url(../images/section-2/mark-arrow.png);
       }
 
       &-ilon::before {
         @include size(61px, 25px);
-        left: -80%;
+        left: -85%;
         content: url(../images/section-2/ilon-arrow.png);
       }
 
@@ -162,14 +159,6 @@
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1419px) {
-    .heroes__list-item {
-      &:not(:last-child) {
-        margin-bottom: 50px;
-      }
-    }
-  }
-
   @media (min-width: 1420px) {
     .heroes {
       padding-top: 20px;
@@ -187,6 +176,7 @@
     }
 
     .heroes__list-item {
+
       &:not(:nth-last-child(-n + 2)) {
         margin-bottom: 96px;
       }
@@ -197,29 +187,38 @@
       flex-wrap: wrap;
     }
 
-    .heroes__list-item-wrapper {
-      text-align: left;
-    }
-
-
     .heroes__list-item-title {
-      @include font-settings(30px, 1);
-      position: absolute;
-      bottom: 5%;
-      left: 45%;
+      @include font-settings(35px, 1);
+      left: 50%;
 
       &-mobile {
         display: none;
       }
+
+      &-robert::before {
+        left: -50%;
+      }
+
+      &-mark::before {
+        left: -40%;
+      }
+
+      &-ilon::before {
+        left: -70%;
+      }
+
+      &-stiv::before {
+        left: -60%;
+      }
     }
 
     .heroes__list-item-text {
-      @include font-settings(23px, 35px);
-      letter-spacing: 0.69px;
+      @include font-settings(25px, 35px);
+      letter-spacing: 0.75px;
     }
 
     .heroes__list-item-photo {
-      margin-right: 42px;
+      margin-right: 46px;
 
       &-mobile {
         display: none;
