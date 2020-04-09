@@ -41,14 +41,11 @@ $main-light-color: rgb(255, 255, 255);
         right: -90px;
         z-index: -1;
     }
+}
 
     &--children {
         position: relative;
     }
-
-    &--kids {
-    }
-}
 }
 
 .children__anounce--photo {
@@ -60,6 +57,50 @@ $main-light-color: rgb(255, 255, 255);
        left: 17%;
    }
 }
-  
+}
 
+@media (min-width: 768px) {
+
+    .section__anounce {
+        margin-bottom: 50px;
+    
+    &--title {
+        font-size: 35px;
+        line-height: 45px;
+        padding-left: 115px;
+        padding-right: 115px;
+    }
+
+    &--images::after {
+        justify-content: center;
+        width: 900px;
+        top: -170px;
+        left: -70px;
+}
+}  
+}
+
+@media (min-width: 1500px) {
+
+    .section__anounce {
+        padding-top: 50px;
+    
+    &--general {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+    }
+    
+    &--title {
+        font-size: 55px;
+        line-height: 75px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &--images::after {
+        top: -140px;
+    }
+    }
 }
