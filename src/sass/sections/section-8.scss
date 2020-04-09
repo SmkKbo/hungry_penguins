@@ -1,171 +1,166 @@
-.section__sertificate {
-  padding-top: 40px;
-  background-image: url(../images/section-8/section-bg.svg);
-  @include bg-image;
-  margin-top: 20px;
-  padding-bottom: 50px;
+$main-text-font: 'HelveticaNeueCyr',
+sans-serif;
+$section-title-font: 'Oswald',
+sans-serif;
+$main-dark-color: rgb(44, 44, 44);
+$secondary-dark-color:rgb(108, 110, 121);
+$yellow-accent-color: rgb(254, 192, 42);
+$main-light-color: rgb(255, 255, 255);
 
-  &__description {
-    font-family: $main-text-font;
-    color: $main-light-color;
-    text-align: center;
-    font-size: 16px;
-    line-height: 22px;
-    padding: 0 30px;
-    font-weight: 700;
-    margin-bottom: 26px;
-  }
-
-  &__flex {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    position: relative;
-  }
-
-  &__first {
-    position: absolute;
-    top: -2%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
-.sertificate__title {
-  font-family: $section-title-font;
-  font-weight: 700;
-  font-size: 15px;
-  text-align: center;
-  text-transform: uppercase;
-  color: $main-light-color;
-  margin-bottom: 0;
-
-  &::before {
-    display: inline-block;
-    content: '[';
-    color: rgb(254, 192, 42);
-    @include size(10px, 30px);
-    margin-right: 6px;
-  }
-
-  &::after {
-    display: inline-block;
-    content: ']';
-    color: rgb(254, 192, 42);
-    @include size(10px, 45px);
-    margin-left: 6px;
-  }
-}
-
-
-@media (min-width: 768px) {
-
-  .container {
-    width: 710px;
-    margin: 0 auto;
-  }
+@media (min-width: 320px) {
 
   .section__sertificate {
-    margin-top: 50px;
-    padding-bottom: 160px;
-    position: relative;
-
-    &-div::after {
-      content: url(../images/section-8/planet.svg);
-      display: block;
-      position: absolute;
-      width: 184px;
-      height: auto;
-      right: 86px;
-      top: 100px;
-    }
-
-    &-div__title {
-      margin-bottom: 70px;
-      padding-left: 52px;
-    }
+    padding-top: 40px;
+    background-image: url(../images/section-8/section-bg.svg);
+    @include bg-image;
+    margin-top: 20px;
+    padding-bottom: 50px;
 
     &__description {
-      text-align: left;
-      padding-left: 0;
-      padding-right: 296px;
-      font-size: 25px;
-      line-height: 35px;
+      font-family: $main-text-font;
+      color: $main-light-color;
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
+      padding: 0 30px;
+      font-weight: 700;
+      margin-bottom: 26px;
+    }
 
+    &__flex {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      position: relative;
     }
 
     &__first {
+      position: absolute;
+      top: -2%;
       left: 50%;
-      top: -5%;
+      transform: translateX(-50%);
     }
   }
 
   .sertificate__title {
-    text-align: left;
-    font-size: 20px;
-    line-height: 45px;
-    margin-bottom: 44px;
-  }
-
-  .sertificates {
-    padding: 0;
-    position: relative;
+    color: $main-light-color;
 
     &::before {
-      content: url(../images/section-8/confetti.svg);
-      display: block;
-      position: absolute;
-      top: -55%;
-      left: 110px;
-      width: 500px;
+      display: inline-block;
+      content: '[';
+      color: rgb(254, 192, 42);
+      @include size(10px, 30px);
+      margin-right: 6px;
+    }
+
+    &::after {
+      display: inline-block;
+      content: ']';
+      color: rgb(254, 192, 42);
+      @include size(10px, 45px);
+      margin-left: 6px;
     }
   }
-}
 
-@media (min-width: 1500px) {
 
-  .container {
-    width: 1420px;
-  }
+  @media (min-width: 768px) {
 
-  .section__sertificate {
-    padding-top: 200px;
-    padding-bottom: 100px;
+    .section__sertificate {
+      margin-top: 50px;
+      padding-bottom: 160px;
+      position: relative;
 
-    &-div {
-      padding-left: 150px;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: nowrap;
+      &-div::after {
+        content: url(../images/section-8/planet.svg);
+        display: block;
+        position: absolute;
+        width: 184px;
+        height: auto;
+        right: 86px;
+        top: 100px;
+      }
 
-      &::after {
-        right: 55%;
-        top: 15%;
+      &-div__title {
+        margin-bottom: 70px;
+        padding-left: 52px;
+      }
+
+      &__description {
+        text-align: left;
+        padding-left: 0;
+        padding-right: 296px;
+        font-size: 25px;
+        line-height: 35px;
+
+      }
+
+      &__first {
+        left: 50%;
+        top: -5%;
       }
     }
 
-    &__description {
-      padding-right: 250px;
+    .sertificate__title {
+      text-align: left;
+      margin-bottom: 44px;
+    }
+
+    .sertificates {
+      padding: 0;
+      position: relative;
+
+      &::before {
+        content: url(../images/section-8/confetti.svg);
+        display: block;
+        position: absolute;
+        top: -55%;
+        left: 110px;
+        width: 500px;
+      }
+    }
+  }
+
+  @media (min-width: 1500px) {
+
+    .section__sertificate {
+      padding-top: 200px;
+      padding-bottom: 100px;
+
+      &-div {
+        padding-left: 150px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+
+        &::after {
+          right: 55%;
+          top: 15%;
+        }
+      }
+
+      &__description {
+        padding-right: 250px;
+      }
+
+    }
+
+    .sertificate__title {
+      font-size: 30px;
+
+      &__description {
+        font-size: 35px;
+        line-height: 50px;
+      }
+    }
+
+    .sertificates {
+
+      &::before {
+        left: 10%;
+        top: -40%;
+      }
+
     }
 
   }
-
-  .sertificate__title {
-    font-size: 30px;
-
-    &__description {
-      font-size: 35px;
-      line-height: 50px;
-    }
-  }
-
-  .sertificates {
-
-    &::before {
-      left: 10%;
-      top: -40%;
-    }
-
-  }
-
 }
