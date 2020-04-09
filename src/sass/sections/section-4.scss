@@ -3,9 +3,7 @@
   padding-bottom: 26px;
   margin-top: 24px;
   background-image: url(../images/section-04/section-4-bg.svg);
-  background-size: 180%;
-  background-repeat: no-repeat;
-  background-position: center 0;
+  @include bg-image($pos:top);
   position: relative;
 
   &::before {

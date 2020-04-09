@@ -1,7 +1,7 @@
 .study-format {
   padding-top: 30px;
   padding-bottom: 70px;
-  @include bg-image;
+  @include bg-image($pos:top);
   background-image: url(../images/section-06/section-06-bg.svg);
   position: relative;
 
@@ -17,11 +17,6 @@
 }
 
 .study-format__title {
-  @include font-settings(15px, 1, 700);
-  font-family: $section-title-font;
-  letter-spacing: 0.9px;
-  text-transform: uppercase;
-  text-align: center;
   margin-bottom: 70px;
 
   &-bracket {
@@ -31,13 +26,11 @@
 }
 
 .study-format__container {
-  width: 270px;
-  margin: 0 auto;
   overflow: hidden;
 }
 
 .study-format__item-wrapper {
- padding: 60px 0 40px;
+  padding: 60px 0 40px;
 }
 
 .study-format__item {
@@ -102,13 +95,7 @@
     }
   }
 
-  .study-format__container {
-    width: 710px;
-  }
-
   .study-format__title {
-    @include font-settings(20px, 1, 700);
-    letter-spacing: 1.2px;
     margin-bottom: 90px;
   }
 
@@ -140,13 +127,12 @@
 @media (min-width: 1420px) {
   .study-format__container {
     width: 1170px;
+    padding-left: 82px;
   }
 
   .study-format {
     padding-top: 164px;
     padding-bottom: 112px;
-    margin-top: 38px;
-    margin-bottom: 66px;
 
     &::before {
       @include size(550px, 550px);
@@ -155,13 +141,7 @@
     }
   }
 
-  .study-format__container {
-    padding-left: 82px;
-  }
-
   .study-format__title {
-    @include font-settings(30px, 1, 700);
-    letter-spacing: 1.8px;
     text-align: left;
     margin-bottom: 82px;
   }

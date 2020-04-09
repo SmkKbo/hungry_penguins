@@ -12,8 +12,7 @@ $main-light-color: rgb(255, 255, 255);
   .section__sertificate {
     padding-top: 40px;
     background-image: url(../images/section-8/section-bg.svg);
-    @include bg-image;
-    margin-top: 20px;
+    @include bg-image($pos:bottom);
     padding-bottom: 50px;
 
     &__description {
@@ -91,7 +90,6 @@ $main-light-color: rgb(255, 255, 255);
         padding-right: 296px;
         font-size: 25px;
         line-height: 35px;
-
       }
 
       &__first {
@@ -141,7 +139,6 @@ $main-light-color: rgb(255, 255, 255);
       &__description {
         padding-right: 250px;
       }
-
     }
 
     .sertificate__title {
@@ -159,8 +156,6 @@ $main-light-color: rgb(255, 255, 255);
         left: 10%;
         top: -40%;
       }
-
     }
-
   }
 }

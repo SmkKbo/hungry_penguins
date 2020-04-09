@@ -7,11 +7,6 @@
   overflow: hidden;
 }
 
-.footer-container {
-  width: 290px;
-  margin: 0 auto;
-}
-
 .logo {
   margin-top: 70px;
   margin-bottom: 24px;
@@ -173,10 +168,9 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1219px) {
+@media (min-width: 768px) and (max-width: 1419px) {
   .footer-container {
     position: relative;
-    width: 710px;
     padding-left: 50px;
 
     &::before {
@@ -213,7 +207,7 @@
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 1420px) {
   .footer {
     padding-top: 116px;
     padding-bottom: 56px;
