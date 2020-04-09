@@ -8,23 +8,58 @@ $main-light-color: rgb(255, 255, 255);
 @media (min-width: 320px) {
 
 .section__anounce {
-    background-image: url(../images/section-1/section-1-bg.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 24px;
 
     &--title {
+        padding-top: 24px;
+        padding-left: 20px;
+        padding-right: 20px;
         font-family: $main-text-font;
         font-size: 20px;
         line-height: 25px;
         text-align: center;
+        margin-bottom: 50px;
 
     }
 
     &--text {
         color: $yellow-accent-color;
     }
+
+    &--images {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        position: relative;
+    
+    &::after {
+        content: url(../images/section-1/section-1-bg.svg);
+        display: block;
+        width: 584px;
+        height: 364px;
+        position: absolute;
+        top: -89px;
+        right: -90px;
+        z-index: -1;
+    }
+
+    &--children {
+        position: relative;
+    }
+
+    &--kids {
+    }
 }
+}
+
+.children__anounce--photo {
+   max-width: none;
+
+   &-second {
+       position: absolute;
+       top: 38%;
+       left: 17%;
+   }
+}
+  
 
 }
