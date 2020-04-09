@@ -118,18 +118,18 @@
     }
   }
 
-  <<<<<<< HEAD @media (min-width: 768px) and (max-width: 1399px) {
+  @media (min-width: 768px) and (max-width: 1399px) {
     .section__teachers {
       overflow: hidden;
       min-width: 100%;
     }
   }
 
-  =======.section__teachers--container {
+  .section__teachers--container {
     width: 100%;
   }
 
-  >>>>>>>section-8 @media (min-width: 768px) {
+  @media (min-width: 768px) {
     .section__teachers {
       padding-top: 45px;
       padding-bottom: 38px;
@@ -210,12 +210,12 @@
 
   @media (min-width: 1420px) {
 
-    <<<<<<< HEAD .section__teachers {
+    .section__teachers {
       margin-top: 62px;
       margin-bottom: 60px;
     }
 
-    =======.section__teachers-container {
+    .section__teachers-container {
       width: 1420px;
     }
 
@@ -224,7 +224,7 @@
       margin-bottom: 60px;
     }
 
-    >>>>>>>section-8 .section-title {
+    .section-title {
 
       &__slider-button {
         width: 100%;
