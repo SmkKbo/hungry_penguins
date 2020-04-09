@@ -1,290 +1,206 @@
-
 .link {
-    font-size: 14px;
+  display: block;
+}
+
+.header {
+  @include bg-image;
+  background-image: url(../images/header/header-bg.svg);
+  padding-top: 18px;
+  padding-bottom: 18px;
+  position: relative;
+
+  &::after {
+    @include pseudo;
+    @include size(270px, 111px);
+    @include bg-image;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../images/header/kids.svg);
   }
-  
-  
-  .wrap__holiday-dreams {
-    padding: 24px 0;
-    min-height: 540px;
-    height: 291px;
-    text-align: center;
-    background: no-repeat url("../images/header/header-bg-mobile.png") center top;
-    object-fit: cover;
-    background-size: cover;
-    background-color: white;
-  }
-  
-  .logo {
-    margin-bottom: 76px;
-    margin-left: 16px;
-    margin-top: 10px;
-  }
-  
-  
-  
-  .dreams__title {
-    
-      font-size: 16px;
-      font-family: "Gill Sans";
-      color: rgb(255, 255, 255);
-      font-style: italic;
-      line-height: 1.375;
-      text-align: center;
-      z-index: 6;
-      margin-bottom: 40px;
-    }
-  
-  .dreams__text {
-      font-size: 20px;
-      font-family: "Gill Sans";
-      color: rgb(255, 255, 255);
-      font-style: italic;
-      line-height: 1.3;
-      text-align: center;
-      z-index: 5;
-    }
-   
-  
-  .dreams__link {
-      font-size: 15px;
-      font-family: "Gill Sans";
-      color: rgb(255, 255, 255);
-      font-style: italic;
-      line-height: 1.2;
-      text-align: center;
-      z-index: 9;
-      margin-top: 40px;
-      margin-bottom: 30px;
-       
-    }
-    .contact-smart{
-      font-size: 15px;
-      font-family: "Gill Sans";
-      color: rgb(255, 255, 255); 
-      font-style: italic;
-      line-height: 3.952;  
-      z-index: 6;
+}
+
+.header__top {
+  margin-bottom: 80px;
+}
+
+.header__logo-img {
+  @include size(83px, 22px);
+}
+
+.header__main {
+  text-align: center;
+}
+
+.header__main-title {
+  @include font-settings(16px, 22px);
+  letter-spacing: 0.48px;
+  font-family: $main-text-font;
+  color: $main-light-color;
+  margin-bottom: 34px;
+}
+
+.header__main-text {
+  @include font-settings(20px, 26px, 700);
+  letter-spacing: 0.8px;
+  font-family: $main-text-font;
+  color: $main-light-color;
+  margin-bottom: 34px;
+}
+
+.header__main-link {
+  @include font-settings(15px, 18px, 700);
+  font-family: $main-text-font;
+  letter-spacing: 0.9px;
+  color: $main-light-color;
+  padding-bottom: 138px;
+}
+
+.header__link-title {
+  border-bottom: 2px solid rgba($main-light-color, 0.3);
+}
+
+@media (max-width: 767px) {
+  .nav {
+    display: none;
   }
 
-  .contacts{
-    
-      font-size: 15px;
-      font-family: "Gill Sans";
-      color: rgb(255, 255, 255);
-     
-      font-style: italic;
-      line-height: 3.952;
-      
-      z-index: 16;
-    
-    
+  .header__main-title {
+    padding: 0 50px;
   }
- 
-  
-  IMG.kids{
-    display: block;
-      margin-left: auto;
-      margin-right: auto
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-top: 50px;
+    padding-bottom: 34px;
+
+    &::after {
+      @include size(672px, 278px);
+    }
   }
-  
-  @media handheld, all and (max-width: 321px) {
-    .navigation {
-      position: fixed;
-      display: none;
-      width: 50px;
-      height: 50px;
+
+  .header__top {
+    margin-bottom: 102px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__logo-img {
+    @include size(110px, 29px);
+  }
+
+  .nav {
+    display: flex;
+
+    &__link {
+      @include font-settings(15px, 18px);
+      font-family: $main-text-font;
+      color: $main-light-color;
+      letter-spacing: 0.75px;
+
+      &:not(:last-child) {
+        margin-right: 72px;
       }
     }
-  
-  @media (min-width: 320px) and (max-width: 424px) {
-    .head-container{
-      display: flex;
-      flex-direction: row;
-    }
+  }
 
-    
-    .container {
-      padding: 0 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .dreams__title {
-      width: 280px;
-    }
-  
-    .dreams__text {
-      width: 220px;
-    }
-  
-    
+  .header__main {
+    padding: 0 120px;
   }
-  
-  @media (min-width: 425px) and (max-width: 767px) {
-    .head-container{
-      display: flex;
-      flex-direction: row;
-    }
-    .dreams__title {
-      width: 300px;
-      margin: 0 auto;
-      margin-bottom: 19px;
-    }
-  
-    .dreams__text {
-      width: 220px;
-      margin-bottom: 29px;
+
+  .header__main-title {
+    @include font-settings(20px, 20px);
+    letter-spacing: 0.6px;
+    margin-bottom: 48px;
+  }
+
+  .header__main-text {
+    @include font-settings(35px, 42px, 700);
+    letter-spacing: 1.4px;
+    margin-bottom: 50px;
+  }
+
+  .header__main-link {
+    padding-bottom: 318px;
+  }
+}
+
+@media (min-width: 1420px) {
+  .header {
+    padding-top: 54px;
+    padding-bottom: 48px;
+
+    &::after {
+      @include size(1420px, 588px);
     }
   }
-  
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .head-container{
-      display: flex;
-      flex-direction: row;
-    }
-    .container {
-      width: 670px;
-      margin: 0 auto;
-    }
-    
-    
-  
-    .registration-wrap {
-      margin-bottom: 60px;
-    }
-  
-    .dreams-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .dreams__title {
-      width: 510px;
-      font-size: 52px;
-      margin-bottom: 40px;
-    }
-  
-    .dreams__text {
-      width: 400px;
-    }
-  
-    .title {
-      width: 420px;
-      margin-bottom: 22px;
-    }
-  
-    .team__list {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 0 100px;
-    }
-  
-    
+
+  .header__top {
+    margin-bottom: 102px;
   }
-  
-  @media (min-width: 1024px) and (max-width: 1439px) {
-    .head-container{
-      display: flex;
-      flex-direction: row;
-    }
-    .container {
-      width: 670px;
-      margin: 0 auto;
-    }
-  
-    .head-container {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row-reverse;
-    }
-  
-    .registration-wrap {
-      margin-bottom: 60px;
-    }
-  
-    .dreams-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .dreams__title {
-      width: 510px;
-      font-size: 52px;
-      margin-bottom: 40px;
-    }
-  
-    .dreams__text {
-      width: 400px;
-    }
-  
-    .title {
-      width: 420px;
-      margin-bottom: 22px;
-    }
-  
-    .team__list {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 0 100px;
-    
+
+  .header__logo-img {
+    @include size(188px, 49px);
   }
-  
-  @media (min-width: 1440px) and (max-width: 2560px) {
-    .head-container{
-      display: flex;
-      flex-direction: row;
+
+  .nav {
+
+    &__link {
+      @include font-settings(23px, 23px);
+      letter-spacing: 1.15px;
+      transition: all 200ms linear;
+      position: relative;
+
+      &::after {
+        @include pseudo;
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: rgb(252, 191, 44);
+        margin-top: 8px;
+        transition: all 200ms linear;
+      }
+
+      &:hover::after,
+      &:focus::after {
+        width: 100%;
+      }
+
+
+      &:not(:last-child) {
+        margin-right: 92px;
+      }
+
+      &:hover,
+      &:focus {
+        color: rgb(252, 191, 44);
+      }
     }
-    .container {
-      width: 1240px;
-      margin: 0 auto;
-    }
-  
-    .head-container {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row-reverse;
-    }
-  
-    .registration-wrap {
-      margin-bottom: 60px;
-    }
-  
-    .dreams-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .dreams__title {
-      width: 510px;
-      font-size: 52px;
-      margin-bottom: 40px;
-    }
-  
-    .dreams__text {
-      width: 400px;
-    }
-  
-    .title {
-      width: 420px;
-      margin-bottom: 22px;
-    }
-  
-    .team__list {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      width: 90%;
-    }
-  
-    .team__item-text {
-      font-size: 16px;
-    }
-    }  
   }
+
+  .header__main {
+    padding: 0 70px;
+  }
+
+  .header__main-title {
+    @include font-settings(36px, 36px);
+    letter-spacing: 1.08px;
+    margin-bottom: 74px;
+  }
+
+  .header__main-text {
+    @include font-settings(60px, 60px, 700);
+    letter-spacing: 3.6px;
+    margin-bottom: 82px;
+  }
+
+  .header__main-link {
+    @include font-settings(30px, 30px, 700);
+    letter-spacing: 1.8px;
+    padding-bottom: 598px;
+  }
+}
