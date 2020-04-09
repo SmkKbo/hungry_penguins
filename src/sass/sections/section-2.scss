@@ -1,193 +1,228 @@
-/*
-  
-  @media handheld, all and (max-width: 321px) {
-    .navigation {
-      position: fixed;
-      display: none;
-      width: 50px;
-      height: 50px;
+  .heroes {
+    padding-top: 10px;
+    padding-bottom: 44px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url(../images/section-2/section-2-bg.svg);
+  }
+
+  .heroes-header {
+    margin-bottom: 76px;
+  }
+
+  .heroes-header__title {
+    @include font-settings(30px, 36px, 900);
+    font-family: $main-text-font;
+    color: rgb(232, 232, 242);
+    text-align: center;
+    margin-bottom: 14px;
+    letter-spacing: 0.9px;
+  }
+
+  .heroes__list-item {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .heroes__list-item-wrapper {
+    text-align: center;
+  }
+
+  .heroes__list-item-title {
+    @include font-settings(20px, 34px);
+    font-family: "Mistral", cursive;
+    color: $yellow-accent-color;
+    margin-bottom: 4px;
+  }
+
+  .heroes__list-item-text {
+    @include font-settings(16px, 30px);
+    font-family: $main-text-font;
+    color: $main-dark-color;
+    letter-spacing: 0.48px;
+  }
+
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    .heroes__list-item {
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 220px;
+
+      &:not(:last-child) {
+        margin-bottom: 34px;
       }
-    }*/
+    }
 
-@media (min-width: 320px) and (max-width: 424px) {
+    .heroes__list-item-title-tablet {
+      display: none;
+    }
 
-  .container {
-    padding: 0 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .heroes__list-item-photo {
+      margin-bottom: 22px;
+
+      &-tablet {
+        display: none;
+      }
+    }
+
+    .heroes__list-item-title {
+      margin-bottom: 4px;
+    }
   }
 
-  .dreams__title {
-    width: 280px;
+  @media (min-width: 768px) {
+    .heroes {
+      padding-top: 30px;
+      padding-bottom: 90px;
+    }
+
+    .heroes-header {
+      margin-bottom: 134px;
+    }
+
+    .heroes-header__title {
+      @include font-settings(60px, 72px, 900);
+      margin-bottom: 28px;
+      letter-spacing: 1.8px;
+    }
+
+    .heroes__list-item {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+
+    .heroes__list-item-wrapper {
+      text-align: left;
+    }
+
+    .heroes__list-item-photo {
+      margin-right: 44px;
+    }
+
+    .heroes__list-item-title {
+      @include font-settings(30px, 1);
+      position: absolute;
+      bottom: 5%;
+      left: 45%;
+
+      &-mobile {
+        display: none;
+      }
+
+      &::before {
+        display: block;
+        position: absolute;
+        bottom: 40%
+      }
+
+      &-robert::before {
+        @include size(53px, 31px);
+        left: -60%;
+        content: url(../images/section-2/robert-arrow.png);
+      }
+
+      &-mark::before {
+        @include size(55px, 36px);
+        left: -55%;
+        content: url(../images/section-2/mark-arrow.png);
+      }
+
+      &-ilon::before {
+        @include size(61px, 25px);
+        left: -80%;
+        content: url(../images/section-2/ilon-arrow.png);
+      }
+
+      &-stiv::before {
+        @include size(55px, 36px);
+        left: -70%;
+        content: url(../images/section-2/stiv-arrow.png);
+      }
+    }
+
+    .heroes__list-item-text {
+      @include font-settings(23px, 35px);
+      letter-spacing: 0.69px;
+    }
+
+
+    .heroes__list-item-photo {
+      margin-right: 42px;
+
+      &-mobile {
+        display: none;
+      }
+    }
   }
 
-  .dreams__text {
-    width: 220px;
-  }
-}
-
-@media (min-width: 425px) and (max-width: 767px) {
-  .dreams__title {
-    width: 300px;
-    margin: 0 auto;
-    margin-bottom: 19px;
+  @media (min-width: 768px) and (max-width: 1419px) {
+    .heroes__list-item {
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
   }
 
-  .dreams__text {
-    width: 220px;
-    margin-bottom: 29px;
+  @media (min-width: 1420px) {
+    .heroes {
+      padding-top: 20px;
+      padding-bottom: 144px;
+    }
+
+    .heroes-header {
+      margin-bottom: 80px;
+    }
+
+    .heroes-header__title {
+      @include font-settings(90px, 108px, 900);
+      margin-bottom: 48px;
+      letter-spacing: 2.7px;
+    }
+
+    .heroes__list-item {
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 96px;
+      }
+    }
+
+    .heroes__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .heroes__list-item-wrapper {
+      text-align: left;
+    }
+
+
+    .heroes__list-item-title {
+      @include font-settings(30px, 1);
+      position: absolute;
+      bottom: 5%;
+      left: 45%;
+
+      &-mobile {
+        display: none;
+      }
+    }
+
+    .heroes__list-item-text {
+      @include font-settings(23px, 35px);
+      letter-spacing: 0.69px;
+    }
+
+    .heroes__list-item-photo {
+      margin-right: 42px;
+
+      &-mobile {
+        display: none;
+      }
+    }
   }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .container {
-    width: 670px;
-    margin: 0 auto;
-  }
-
-  .head-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-  }
-
-  .registration-wrap {
-    margin-bottom: 60px;
-  }
-
-  .dreams-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .dreams__title {
-    width: 510px;
-    font-size: 52px;
-    margin-bottom: 40px;
-  }
-
-  .dreams__text {
-    width: 400px;
-  }
-
-  .title {
-    width: 420px;
-    margin-bottom: 22px;
-  }
-
-  .team__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 100px;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .container {
-    width: 940px;
-    margin: 0 auto;
-  }
-
-  .head-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-  }
-
-  .registration-wrap {
-    margin-bottom: 60px;
-  }
-
-  .dreams-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .dreams__title {
-    width: 510px;
-    font-size: 52px;
-    margin-bottom: 40px;
-  }
-
-  .dreams__text {
-    width: 400px;
-  }
-
-  .title {
-    width: 420px;
-    margin-bottom: 22px;
-  }
-
-  .team__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
-
-@media (min-width: 1440px) and (max-width: 2560px) {
-  .container {
-    width: 1240px;
-    margin: 0 auto;
-  }
-
-  .head-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-  }
-
-  .registration-wrap {
-    margin-bottom: 60px;
-  }
-
-  .dreams-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .dreams__title {
-    width: 510px;
-    font-size: 52px;
-    margin-bottom: 40px;
-  }
-
-  .dreams__text {
-    width: 400px;
-  }
-
-  .title {
-    width: 420px;
-    margin-bottom: 22px;
-  }
-
-  .team__list {
-    background-image: url("../images/section-2-bg.png");
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 90%;
-  }
-
-  .team__item-text {
-    font-size: 16px;
-  }
-}
-
-
-
-.team__item-photo {
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.it {
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: .9px;
-}
