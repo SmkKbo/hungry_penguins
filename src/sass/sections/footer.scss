@@ -3,7 +3,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
   font-family: $main-text-font;
-  background-image: url(../../images/footer/footer-bg.svg);
+  background-image: url(../images/footer/footer-bg.svg);
   overflow: hidden;
 }
 
@@ -84,28 +84,28 @@
     @include bg-image($size: contain);
 
     &-telegram {
-      background-image: url(../../images/footer/telegram.png);
+      background-image: url(../images/footer/telegram.png);
     }
 
     &-facebook {
-      background-image: url(../../images/footer/facebook.png);
+      background-image: url(../images/footer/facebook.png);
     }
 
     &-youtube {
-      background-image: url(../../images/footer/youtube.png);
+      background-image: url(../images/footer/youtube.png);
     }
 
     @media (min-resolution: 192dpi) {
       &-telegram {
-        background-image: url(../../images/footer/telegram@2x.png);
+        background-image: url(../images/footer/telegram@2x.png);
       }
 
       &-facebook {
-        background-image: url(../../images/footer/facebook@2x.png);
+        background-image: url(../images/footer/facebook@2x.png);
       }
 
       &-youtube {
-        background-image: url(../../images/footer/youtube@2x.png);
+        background-image: url(../images/footer/youtube@2x.png);
       }
     }
   }
@@ -181,7 +181,7 @@
 
     &::before {
       display: block;
-      content: url(../../images/footer/rocket.svg);
+      content: url(../images/footer/rocket.svg);
       position: absolute;
       @include bg-image;
       width: 170px;
@@ -221,7 +221,7 @@
 
     &::before {
       display: block;
-      content: url(../../images/footer/rocket.svg);
+      content: url(../images/footer/rocket.svg);
       position: absolute;
       @include bg-image;
       width: 336px;

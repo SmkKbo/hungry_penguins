@@ -2,7 +2,7 @@
   padding-top: 30px;
   padding-bottom: 70px;
   @include bg-image;
-  background-image: url(../../images/section-06/section-06-bg.svg);
+  background-image: url(../images/section-06/section-06-bg.svg);
   position: relative;
 
   &::before {
@@ -11,8 +11,8 @@
     @include size(158px, 158px);
     position: absolute;
     bottom: -14px;
-    right: -66px;
-    background-image: url(../../images/section-06/sputnik-2.svg);
+    right: 0;
+    background-image: url(../images/section-06/sputnik-2.svg);
   }
 }
 
@@ -37,7 +37,7 @@
 }
 
 .study-format__item-wrapper {
-  margin: 0 auto;
+ padding: 60px 0 40px;
 }
 
 .study-format__item {
@@ -54,15 +54,15 @@
   }
 
   &-first::before {
-    background-image: url(../../images/section-06/star-pink.svg);
+    background-image: url(../images/section-06/star-pink.svg);
   }
 
   &-second::before {
-    background-image: url(../../images/section-06/star-yellow.svg);
+    background-image: url(../images/section-06/star-yellow.svg);
   }
 
   &-third::before {
-    background-image: url(../../images/section-06/star-blue.svg);
+    background-image: url(../images/section-06/star-blue.svg);
   }
 
   &-first,
@@ -98,7 +98,7 @@
     &::before {
       @include size(360px, 360px);
       bottom: 26px;
-      right: -70px;
+      right: 0;
     }
   }
 
@@ -131,13 +131,13 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1169px) {
+@media (min-width: 768px) and (max-width: 1420px) {
   .study-format__item-wrapper {
     padding-left: 52px;
   }
 }
 
-@media (min-width: 1170px) {
+@media (min-width: 1420px) {
   .study-format__container {
     width: 1170px;
   }
@@ -151,7 +151,7 @@
     &::before {
       @include size(550px, 550px);
       bottom: 40px;
-      right: -94px;
+      right: 0;
     }
   }
 

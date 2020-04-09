@@ -3,30 +3,6 @@
   padding-bottom: 32px;
 }
 
-.courses-elements-container {
-  width: 290px;
-  margin: 0 auto;
-}
-
-.section__title {
-  @include font-settings(15px, 1, 700);
-  letter-spacing: 0.96px;
-  font-family: $section-title-font;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 24px;
-
-  &-bracket-open {
-    color: $yellow-accent-color;
-    margin-right: 8px;
-  }
-
-  &-bracket-close {
-    color: $yellow-accent-color;
-    margin-left: 8px;
-  }
-}
-
 .courses-elements__list {
   counter-reset: item;
   margin-bottom: 44px;
@@ -47,15 +23,15 @@
   }
 
   &-first::before {
-    background-image: url(../../images/section-05/icon-soft-skills.svg);
+    background-image: url(../images/section-05/icon-soft-skills.svg);
   }
 
   &-second::before {
-    background-image: url(../../images/section-05/icon-hard-skills.png);
+    background-image: url(../images/section-05/icon-hard-skills.png);
   }
 
   &-third::before {
-    background-image: url(../../images/section-05/icon-real-project.svg);
+    background-image: url(../images/section-05/icon-real-project.svg);
   }
 
 }
@@ -119,16 +95,6 @@
     padding-bottom: 50px;
   }
 
-  .courses-elements-container {
-    width: 710px;
-  }
-
-  .section__title {
-    @include font-settings(20px, 1, 700);
-    letter-spacing: 1.2px;
-    margin-bottom: 38px;
-  }
-
   .courses-elements__list {
     margin-bottom: 56px;
   }
@@ -170,17 +136,7 @@
     padding-top: 66px;
     padding-bottom: 78px;
   }
-
-  .courses-elements-container {
-    width: 1420px;
-  }
-
-  .section__title {
-    @include font-settings(30px, 1, 700);
-    letter-spacing: 1.8px;
-    margin-bottom: 64px;
-  }
-
+  
   .courses-elements__list {
     display: flex;
     justify-content: space-between;

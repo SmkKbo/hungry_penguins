@@ -1,14 +1,9 @@
-.test-container {
-  width: 290px;
-  margin: 0 auto;
-}
-
 .test-section {
   padding-top: 104px;
   padding-bottom: 26px;
   margin-top: 24px;
-  background-image: url(../../images/section-04/section-4-bg.svg);
-  background-size: contain;
+  background-image: url(../images/section-04/section-4-bg.svg);
+  background-size: 180%;
   background-repeat: no-repeat;
   background-position: 0 0;
   position: relative;
@@ -21,7 +16,7 @@
     left: 50%;
     transform: translateX(-50%);
     @include bg-image;
-    background-image: url(../../images/section-04/icon-sputnik-3.svg);
+    background-image: url(../images/section-04/icon-sputnik-3.svg);
   }
 }
 
@@ -37,24 +32,9 @@
 
 .test__field {
   background-color: $main-light-color;
-  width: 290px;
-  margin: 0 auto;
   padding: 38px 30px;
+  margin: 0 auto;
   box-shadow: 0px 8px 40px 0px rgba(1, 1, 0, 0.08);
-}
-
-.section__title {
-  @include font-settings(15px, 1, 700);
-  font-family: $section-title-font;
-  letter-spacing: 0.9px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 20px;
-
-  &-bracket {
-    color: $yellow-accent-color;
-    margin: 0 8px;
-  }
 }
 
 .test__about {
@@ -143,11 +123,11 @@
   cursor: pointer;
 
   &-prev {
-    background-image: url(../../images/section-04/left-arrow.svg);
+    background-image: url(../images/section-04/left-arrow.svg);
   }
 
   &-next {
-    background-image: url(../../images/section-04/right-arrow.svg);
+    background-image: url(../images/section-04/right-arrow.svg);
   }
 
   &-wrapper-desktop {
@@ -192,6 +172,7 @@
     padding-top: 170px;
     padding-bottom: 46px;
     margin-top: 44px;
+    background-size: contain;
 
     &::before {
       @include size(68px, 68px);
@@ -210,11 +191,7 @@
     padding: 40px;
   }
 
-  .section__title {
-    @include font-settings(20px, 1, 700);
-    letter-spacing: 1.2px;
-    margin-bottom: 28px;
-  }
+
 
   .test__about {
     @include font-settings(16px, 30px);
@@ -243,7 +220,7 @@
   }
 }
 
-@media (min-width: 786px) and (max-width: 1419px) {
+@media (min-width: 768px) and (max-width: 1419px) {
   .test__title {
     margin-right: 60px;
   }
@@ -289,11 +266,7 @@
     justify-content: space-between;
   }
 
-  .section__title {
-    @include font-settings(30px, 1, 700);
-    letter-spacing: 1.8px;
-    margin-bottom: 40px;
-  }
+
 
   .test__title-wrapper {
     display: flex;
@@ -325,12 +298,12 @@
 
     &-prev {
       padding-left: 36px;
-      background-image: url(../../images/section-04/left-arrow.svg);
+      background-image: url(../images/section-04/left-arrow.svg);
     }
 
     &-next {
       padding-right: 36px;
-      background-image: url(../../images/section-04/right-arrow.svg);
+      background-image: url(../images/section-04/right-arrow.svg);
       background-position: center right;
     }
   }

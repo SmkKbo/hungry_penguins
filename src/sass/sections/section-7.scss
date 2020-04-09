@@ -1,46 +1,13 @@
-$main-text-font: 'HelveticaNeueCyr',
-sans-serif;
-$section-title-font: 'Oswald',
-sans-serif;
-$main-dark-color: rgb(44, 44, 44);
-$secondary-dark-color:rgb(108, 110, 121);
-$yellow-accent-color: rgb(254, 192, 42);
-$main-light-color: rgb(255, 255, 255);
-
-@media (min-width: 320px) {
-
-  .container {
-    width: 270px;
-    margin: 0 auto;
-  }
-
   .section__teachers {
     margin-top: 50px;
   }
 
   .section-title {
-    margin-bottom: 20px;
-    text-align: center;
-    text-transform: uppercase;
-
-    &::before {
-      display: inline-block;
-      content: '[';
-      color: rgb(254, 192, 42);
-      @include size(10px, 30px);
-      margin-right: 6px;
-    }
-
-    &::after {
-      display: inline-block;
-      content: ']';
-      color: rgb(254, 192, 42);
-      @include size(10px, 45px);
-      margin-left: 6px;
-    }
 
     &__teachers-list {
       position: relative;
+      padding-top: 40px;
+      padding-bottom: 120px;
     }
 
     &__slider-button {
@@ -74,7 +41,6 @@ $main-light-color: rgb(255, 255, 255);
         transform: translateX(50%);
       }
     }
-
   }
 
   .icon__social-svg {
@@ -117,6 +83,8 @@ $main-light-color: rgb(255, 255, 255);
 
     &__item {
       box-shadow: 0 0 20px 0 #ccc;
+      width: 290px;
+      margin: 0 auto;
 
       &__desktop {
         display: none;
@@ -149,18 +117,18 @@ $main-light-color: rgb(255, 255, 255);
       font-family: $main-text-font;
     }
   }
-}
 
-@media (min-width: 768px) {
-
-  .container {
-    width: 100%;
+  @media (min-width: 768px) and (max-width: 1399px) {
+    .section__teachers {
+      overflow: hidden;
+      min-width: 100%;
+    }
   }
 
-  .section-teachers {
-    margin-top: 45px;
-    margin-bottom: 38px;
-    overflow: hidden;
+@media (min-width: 768px) {
+  .section__teachers {
+    padding-top: 45px;
+    padding-bottom: 38px;
   }
 
   .section-title {
@@ -195,11 +163,11 @@ $main-light-color: rgb(255, 255, 255);
 
     &__item {
       width: 380px;
-      height: 586px;
+      padding-bottom: 30px;
       flex-shrink: 0;
 
       &__desktop {
-        display: table;
+        display: block;
       }
     }
   }
@@ -236,11 +204,7 @@ $main-light-color: rgb(255, 255, 255);
   }
 }
 
-@media (min-width: 1500px) {
-
-  .container {
-    width: 1420px;
-  }
+@media (min-width: 1420px) {
 
   .section__teachers {
     margin-top: 62px;
@@ -248,9 +212,6 @@ $main-light-color: rgb(255, 255, 255);
   }
 
   .section-title {
-    margin-bottom: 84px;
-    font-size: 30px;
-    line-height: 45px;
 
     &__slider-button {
       width: 100%;
@@ -268,13 +229,6 @@ $main-light-color: rgb(255, 255, 255);
 
   .teachers-list {
     justify-content: space-around;
-
-    &__item {
-
-      &__desktop {
-        display: table;
-      }
-    }
   }
 
   .list-skills {

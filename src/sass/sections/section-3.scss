@@ -1,57 +1,28 @@
-@media (min-width: 320px) {
-
-  .container {
-    min-width: 320px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-
   .preparation {
     padding: 48px 0;
 
-    &-titles::before {
-      content: "";
-      background-image: url(../images/icons__section-3/code.svg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      height: 38px;
-      width: 38px;
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 26px;
+    &-titles {
+      padding: 0 40px;
+
+      &::before {
+        content: "";
+        background-image: url(../images/icons__section-3/code.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 38px;
+        width: 38px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
     }
   }
 
   .section-title {
-    font-size: 15px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 20px;
-    text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
-
-    &::before {
-      display: inline-block;
-      content: '[';
-      color: rgb(254, 192, 42);
-      margin-right: 6px;
-    }
-
-    &::after {
-      display: inline-block;
-      content: ']';
-      color: rgb(254, 192, 42);
-      @include size(10px, 45px);
-      margin-left: 6px;
-    }
-
     &__programm {
       font-family: "HelveticaNeueCyr";
       font-weight: 700;
       color: rgb(254, 192, 42);
-      padding: 0 55px;
       text-align: center;
       font-size: 16px;
       line-height: 22px;
@@ -75,7 +46,6 @@
         }
       }
     }
-
   }
 
   .programm-types__title {
@@ -127,33 +97,23 @@
     padding-right: 40px;
   }
 
-}
-
 @media (min-width: 768px) {
-
-  .container {
-    width: 710px;
-    padding: 0;
-  }
-
   .preparation {
     margin-bottom: 90px;
     padding-top: 90px;
 
-    &-titles::before {
-      height: 50px;
-      width: 50px;
-      margin: 0 auto;
+    &-titles {
+      padding: 0;
+
+      &::before {
+        height: 50px;
+        width: 50px;
+        margin: 0 auto 40px;
+      }
     }
   }
 
   .section-title {
-    font-size: 20px;
-    line-height: 45px;
-    padding: 0 15px;
-    margin-top: 32px;
-    margin-bottom: 27px;
-
     &__programm {
       font-size: 20px;
       line-height: 25px;
@@ -215,25 +175,21 @@
 }
 
 @media (min-width: 1460px) {
-
-  .container {
-    width: 1420px;
-    padding: 0 20px;
-  }
-
   .preparation {
     margin-top: 110px;
     margin-bottom: 130px;
 
-    &-titles::before {
-      height: 70px;
-      width: 70px;
+    &-titles {
+      margin-bottom: 70px;
+      &::before {
+        height: 70px;
+        width: 70px;
+      }
     }
+    
   }
 
   .section-title {
-    font-size: 30px;
-
     &__programm {
       font-size: 30px;
       line-height: 40px;
