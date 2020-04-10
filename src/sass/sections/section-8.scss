@@ -1,19 +1,12 @@
-$main-text-font: 'HelveticaNeueCyr',
-sans-serif;
-$section-title-font: 'Oswald',
-sans-serif;
-$main-dark-color: rgb(44, 44, 44);
-$secondary-dark-color:rgb(108, 110, 121);
-$yellow-accent-color: rgb(254, 192, 42);
-$main-light-color: rgb(255, 255, 255);
-
-@media (min-width: 320px) {
-
   .section__sertificate {
     padding-top: 40px;
     background-image: url(../images/section-8/section-bg.svg);
     @include bg-image($pos:bottom);
     padding-bottom: 50px;
+
+    &-container {
+      padding: 0;
+    }
 
     &__description {
       font-family: $main-text-font;
@@ -158,4 +151,3 @@ $main-light-color: rgb(255, 255, 255);
       }
     }
   }
-}
