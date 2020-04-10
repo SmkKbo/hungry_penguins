@@ -1,6 +1,6 @@
 .test-section {
   padding-top: 104px;
-  padding-bottom: 26px;
+  padding-bottom: 66px;
   background-image: url(../images/section-04/section-4-bg.svg);
   @include bg-image($pos:top);
   position: relative;
@@ -167,7 +167,7 @@
 
   .test-section {
     padding-top: 170px;
-    padding-bottom: 46px;
+    padding-bottom: 76px;
     margin-top: 44px;
     background-size: contain;
 
@@ -257,7 +257,7 @@
 
   .test__field {
     width: 1420px;
-    padding: 120px 150px 216px;
+    padding: 120px 150px 136px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
