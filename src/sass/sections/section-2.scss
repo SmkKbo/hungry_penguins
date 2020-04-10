@@ -25,11 +25,13 @@
 
   .heroes__list-item {
     display: flex;
+    flex-basis: 618px;
     margin: 0 auto;
   }
 
   .heroes__list-item-wrapper {
     text-align: center;
+    width: 330px;
   }
 
   .heroes__list-item-title {

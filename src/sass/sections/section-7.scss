@@ -213,13 +213,6 @@
       padding-bottom: 120px;
     }
 
-    .section-title {
-
-      &__slider-button {
-        width: 100%;
-      }
-    }
-
     .img-wrap {
 
       &__name-teacher {
@@ -229,6 +222,7 @@
 
     .teachers-list {
       justify-content: space-around;
+      margin: 0 30px;
     }
 
     .list-skills {
