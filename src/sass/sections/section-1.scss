@@ -12,7 +12,6 @@
       line-height: 25px;
       text-align: center;
       margin-bottom: 50px;
-
     }
 
     &--text {
@@ -52,15 +51,7 @@
       &--images {
         width: 420px;
         margin: 0 auto;
-
-        /*&::after {
-        justify-content: center;
-        width: 700px;
-        top: -130px;
-        left: -140px;
-    }*/
       }
-
     }
 
     .children__anounce--photo-second {
@@ -68,7 +59,7 @@
     }
   }
 
-  @media (min-width: 1500px) {
+  @media (min-width: 1420px) {
 
     .section__anounce {
       padding-top: 50px;
@@ -98,10 +89,6 @@
 
       &--children {
         width: 968px;
-        /*position: absolute;
-        left: 192px;
-        top: 20px;*/
-
       }
     }
 
