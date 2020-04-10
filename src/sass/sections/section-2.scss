@@ -61,12 +61,8 @@
       display: none;
     }
 
-    .heroes__list-item-photo {
+    .heroes__list-item-img {
       margin-bottom: 22px;
-
-      &-tablet {
-        display: none;
-      }
     }
 
     .heroes__list-item-title {
@@ -153,12 +149,8 @@
     }
 
 
-    .heroes__list-item-photo {
+    .heroes__list-item-img {
       margin-right: 42px;
-
-      &-mobile {
-        display: none;
-      }
     }
   }
 
@@ -220,11 +212,7 @@
       letter-spacing: 0.75px;
     }
 
-    .heroes__list-item-photo {
+    .heroes__list-item-img {
       margin-right: 46px;
-
-      &-mobile {
-        display: none;
-      }
     }
   }
