@@ -8,6 +8,7 @@ $main-light-color: rgb(255, 255, 255);
 @media (min-width: 320px) {
 
 .section__anounce {
+    overflow: hidden;
 
     &--title {
         padding-top: 24px;
@@ -63,6 +64,7 @@ $main-light-color: rgb(255, 255, 255);
 
     .section__anounce {
         margin-bottom: 50px;
+        overflow: hidden;
     
     &--title {
         font-size: 35px;
@@ -71,13 +73,22 @@ $main-light-color: rgb(255, 255, 255);
         padding-right: 115px;
     }
 
-    &--images::after {
+    &--images {
+        width: 420px;
+        margin: 0 auto;
+    
+    &::after {
         justify-content: center;
-        width: 900px;
-        top: -170px;
-        left: -70px;
+        width: 700px;
+        top: -130px;
+        left: -140px;
 }
+    }
 }  
+
+.children__anounce--photo-second {
+    left: 32%;
+}
 }
 
 @media (min-width: 1500px) {
@@ -95,12 +106,22 @@ $main-light-color: rgb(255, 255, 255);
     &--title {
         font-size: 55px;
         line-height: 75px;
-        padding-left: 0;
-        padding-right: 0;
+        margin-left: 100px;
     }
 
     &--images::after {
-        top: -140px;
+        top: -100px;
     }
+
+    &--children {
+        position: absolute;
+        left: 192px;
+        top: 20px;
+    }
+    }
+
+    .children__anounce--photo-second {
+        left: 140px;
+        top: 90px;
     }
 }
