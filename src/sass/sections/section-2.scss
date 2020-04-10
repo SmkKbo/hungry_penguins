@@ -25,7 +25,7 @@
 
   .heroes__list-item {
     display: flex;
-    flex-basis: 618px;
+    // flex-basis: 618px;
     margin: 0 auto;
   }
 
@@ -92,7 +92,7 @@
       display: flex;
       flex-basis: 570px;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
       position: relative;
 
       &:not(:last-child) {
@@ -108,7 +108,7 @@
       @include font-settings(30px, 1);
       position: absolute;
       bottom: 0;
-      left: 45%;
+      left: 50%;
 
       &-mobile {
         display: none;
@@ -182,6 +182,7 @@
     .heroes__list {
       display: flex;
       flex-wrap: wrap;
+      align-items: baseline;
     }
 
     .heroes__list-item-title {
