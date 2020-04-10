@@ -1,6 +1,6 @@
 .reviews {
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding-top: 50px;
+  padding-bottom: 56px;
 
   &-container {
     position: relative;
@@ -114,8 +114,8 @@
 
 @media (min-width: 768px) {
   .reviews {
-    padding-top: 36px;
-    padding-bottom: 52px;
+    padding-top: 72px;
+    padding-bottom: 54px;
   }
 
   .reviews__list {
@@ -155,7 +155,7 @@
 
   .reviews__list {
     position: relative;
-    min-height: 570px;
+    min-height: 650px;
     overflow: hidden;
   }
 

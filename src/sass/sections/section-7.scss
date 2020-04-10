@@ -1,5 +1,6 @@
   .section__teachers {
-    margin-top: 50px;
+    padding-top: 90px;
+    padding-bottom: 120px;
   }
 
   .section-title {
@@ -7,8 +8,6 @@
     &__teachers-list {
       position: relative;
       margin: 0 auto;
-      padding-top: 40px;
-      padding-bottom: 120px;
     }
 
     &__slider-button {
@@ -130,8 +129,8 @@
 
   @media (min-width: 768px) {
     .section__teachers {
-      padding-top: 45px;
-      padding-bottom: 38px;
+      padding-top: 120px;
+      padding-bottom: 140px;
     }
 
     .section-title {
@@ -210,13 +209,8 @@
   @media (min-width: 1420px) {
 
     .section__teachers {
-      margin-top: 62px;
-      margin-bottom: 60px;
-    }
-
-    .section__teachers {
-      margin-top: 62px;
-      margin-bottom: 60px;
+      padding-top: 120px;
+      padding-bottom: 120px;
     }
 
     .section-title {

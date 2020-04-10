@@ -1,5 +1,5 @@
   .section__sertificate {
-    padding-top: 40px;
+    padding-top: 80px;
     background-image: url(../images/section-8/section-bg.svg);
     @include bg-image($pos:bottom);
     padding-bottom: 50px;
@@ -54,11 +54,8 @@
     }
   }
 
-
   @media (min-width: 768px) {
-
     .section__sertificate {
-      margin-top: 50px;
       padding-bottom: 160px;
       position: relative;
 
@@ -111,7 +108,7 @@
     }
   }
 
-  @media (min-width: 1500px) {
+  @media (min-width: 1420px) {
 
     .section__sertificate {
       padding-top: 200px;

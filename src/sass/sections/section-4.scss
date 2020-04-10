@@ -1,7 +1,6 @@
 .test-section {
   padding-top: 104px;
   padding-bottom: 26px;
-  margin-top: 24px;
   background-image: url(../images/section-04/section-4-bg.svg);
   @include bg-image($pos:top);
   position: relative;
